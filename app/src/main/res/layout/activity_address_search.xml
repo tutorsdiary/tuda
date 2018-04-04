@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="12.5dp"
+            android:paddingRight="12.5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_address_type"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/common_select_box_arrow"
+                android:drawablePadding="18dp"
+                android:text="주소구분을 선택하세요."
+                style="@style/T3"/>
+        </LinearLayout>
+
+        <include layout="@layout/divider_full"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="12.5dp"
+            android:paddingRight="12.5dp"
+            android:paddingBottom="9dp"
+            android:background="@color/light_gray"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_address"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:background="@null"
+                android:hint="예)삼성동, 삼성동 159"
+                android:imeOptions="actionSearch"
+                style="@style/T2"
+                android:textColor="@color/transparent_dark20"
+                android:singleLine="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#c2c2c2"/>
+        </LinearLayout>
+
+        <include layout="@layout/divider_full"/>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ListView
+                    android:id="@+id/list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/divider"
+                    android:dividerHeight="0.5dp"
+                    android:drawSelectorOnTop="false"
+                    android:scrollbars="none"/>
+
+                <ScrollView
+                    android:id="@+id/error_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_error"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@drawable/common_error"
+                            android:drawablePadding="10dp"
+                            android:text="@string/list_item_empty6"
+                            style="@style/T5"/>
+
+                        <LinearLayout
+                            android:id="@+id/layout_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginBottom="50dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <com.tuda.teacher.ui.view.HeaderRowView
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/headerrow_height"
+                                app:rowTitle="검색이 안 될 경우 직접 입력해주세요."/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/edit_zipcode"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="7dp"
+                                        android:layout_marginLeft="12.5dp"
+                                        android:layout_marginRight="12.5dp"
+                                        android:background="@null"
+                                        android:hint="우편번호를 입력해주세요."
+                                        style="@style/T4"
+                                        android:singleLine="true"/>
+
+                                    <include layout="@layout/divider_full"/>
+
+                                    <EditText
+                                        android:id="@+id/edit_address1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="7dp"
+                                        android:layout_marginBottom="7dp"
+                                        android:layout_marginLeft="12.5dp"
+                                        android:layout_marginRight="12.5dp"
+                                        android:background="@null"
+                                        android:hint="기본주소를 입력해주세요."
+                                        style="@style/T3"
+                                        android:singleLine="true"/>
+
+                                    <include layout="@layout/divider_full"/>
+
+                                    <EditText
+                                        android:id="@+id/edit_address2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="7dp"
+                                        android:layout_marginBottom="7dp"
+                                        android:layout_marginLeft="12.5dp"
+                                        android:layout_marginRight="12.5dp"
+                                        android:background="@null"
+                                        android:hint="상세주소를 입력해주세요."
+                                        style="@style/T4"
+                                        android:singleLine="true"/>
+
+                                    <include layout="@layout/divider_full"/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/btn_regist"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_gravity="center"
+                                android:text="입력완료"
+                                style="@style/T1"
+                                android:textColor="@color/white"
+                                android:background="@color/point_color_2"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+                <include layout="@layout/progress" />
+            </FrameLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+</FrameLayout>

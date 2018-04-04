@@ -1,0 +1,162 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.tuda.teacher.ui.view.HeaderRowView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/headerrow_height"
+                    app:rowTitle="등록정보 및 로그인설정"/>
+
+                <RelativeLayout
+                    android:id="@+id/area_email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:gravity="center_vertical"
+                    android:tag="infochange">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:drawableLeft="@drawable/common_person"
+                        android:drawablePadding="11dp"
+                        android:text="@string/mypage_info_change"
+                        style="@style/T4"/>
+
+                    <ImageButton
+                        android:id="@+id/btn_infochange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/setting_enter"
+                        android:tag="infochange"/>
+                </RelativeLayout>
+
+                <include layout="@layout/divider"/>
+
+                <LinearLayout
+                    android:id="@+id/area_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/area_passwordchange"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:gravity="center_vertical"
+                        android:tag="passwordchange">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:drawableLeft="@drawable/setting_lock"
+                            android:drawablePadding="11dp"
+                            android:text="@string/mypage_passwd_change"
+                            style="@style/T4"/>
+
+                        <ImageButton
+                            android:id="@+id/btn_passwordchange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/setting_enter"
+                            android:tag="passwordchange"/>
+                    </RelativeLayout>
+
+                    <include layout="@layout/divider"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/area_autologin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:gravity="center_vertical"
+                    android:tag="autologin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="6dp"
+                        android:gravity="center_vertical"
+                        android:drawableLeft="@drawable/setting_auto_login"
+                        android:drawablePadding="11dp"
+                        android:text="@string/mypage_auto_login"
+                        style="@style/T4"/>
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/switch_autologin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:checked="true"
+                        android:tag="autologin"/>
+                </RelativeLayout>
+
+                <include layout="@layout/divider"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/formbutton_selector_square"
+                        android:text="로그아웃"
+                        style="@style/T5"
+                        android:tag="logout"/>
+
+                    <Button
+                        android:id="@+id/btn_withdraw"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/formbutton_selector_square"
+                        android:text="탈퇴"
+                        style="@style/T5"
+                        android:tag="withdraw"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

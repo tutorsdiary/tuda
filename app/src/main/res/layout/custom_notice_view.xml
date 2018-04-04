@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_noticeview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:clickable="true"
+    android:splitMotionEvents="false"
+    android:background="@color/transparent_dark60"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rectangle_rounded_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/notice_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="13dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:text="알림"
+            style="@style/T2"
+            android:textColor="@color/text_black"/>
+
+        <TextView
+            android:id="@+id/notice_contents_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            style="@style/T6"
+            android:textColor="#2b2b2b"
+            android:lineSpacingExtra="7dp"/>
+
+        <TextView
+            android:id="@+id/notice_contents_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            style="@style/T6"
+            android:textColor="@color/point_color_1"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="11.5dp"
+            android:paddingLeft="18dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/notice_btn_no"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:text="다음에"
+                style="@style/T5"
+                android:textColor="@color/transparent_dark20"
+                android:visibility="gone"
+                android:tag="no"/>
+
+            <Button
+                android:id="@+id/notice_btn_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:minWidth="50dp"
+                android:layout_marginRight="18dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:text="확인"
+                android:textAllCaps="false"
+                style="@style/T5"
+                android:textColor="@color/point_color_1"
+                android:tag="ok"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

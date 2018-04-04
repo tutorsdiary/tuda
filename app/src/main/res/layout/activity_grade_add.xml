@@ -1,0 +1,233 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/common_person"/>
+
+                    <TextView
+                        android:id="@+id/text_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:layout_weight="1"
+                        style="@style/T3"/>
+                </LinearLayout>
+
+                <include layout="@layout/divider"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/student_school_icon"/>
+
+                    <TextView
+                        android:id="@+id/text_school"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:layout_gravity="center"
+                        android:text="초등학교/1학년"
+                        style="@style/T3"/>
+                    <Spinner
+                        android:id="@+id/spin_term"
+                        android:spinnerMode="dialog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="학기"
+                        style="@style/T3"/>
+                </LinearLayout>
+
+                <include layout="@layout/divider"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp">
+                    <ImageView
+                        android:id="@+id/area_exam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/student_student_info_subject"/>
+
+                    <Spinner
+                        android:id="@+id/spin_examtype"
+                        android:spinnerMode="dialog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/area_exam"
+                        android:layout_gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/edit_type_etc"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:layout_toRightOf="@+id/spin_examtype"
+                        android:hint="구분입력"
+                        style="@style/T3"
+                        android:singleLine="true"
+                        android:visibility="gone"/>
+
+                    <Spinner
+                        android:id="@+id/spin_subject"
+                        android:spinnerMode="dialog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/edit_type_etc"
+                        android:layout_marginLeft="5dp"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+
+                <include layout="@layout/divider"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/student_grade_off"/>
+
+                    <EditText
+                        android:id="@+id/edit_point"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:background="@null"
+                        android:hint="학생점수"
+                        style="@style/T3"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"/>
+
+                    <EditText
+                        android:id="@+id/edit_avgpoint"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:layout_marginLeft="5dp"
+                        android:hint="평균점수"
+                        style="@style/T3"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:visibility="visible"/>
+
+                    <Spinner
+                        android:id="@+id/spin_grade"
+                        android:spinnerMode="dialog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"/>
+
+                    <Spinner
+                        android:id="@+id/spin_avggrade"
+                        android:spinnerMode="dialog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <include layout="@layout/divider"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="75dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/pay_edit_memo"/>
+
+                    <EditText
+                        android:id="@+id/edit_memo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:background="@null"
+                        android:layout_weight="1"
+                        android:hint="메모를 입력하세요."
+                        style="@style/T4"
+                        android:lines="3"
+                        android:gravity="top"/>
+                </LinearLayout>
+
+                <include layout="@layout/divider"/>
+
+                <Button
+                    android:id="@+id/btn_regist"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/formbutton_selector_square"
+                    android:text="등록완료"
+                    style="@style/T5"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

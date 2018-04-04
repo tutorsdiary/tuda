@@ -1,0 +1,1070 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/academyType_area"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/academy_type_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        android:text="채용분류"
+                        style="@style/T3"/>
+
+                    <TextView
+                        android:id="@+id/academyType"
+                        android:layout_toRightOf="@id/academy_type_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:hint="채용분류를 선택하세요."
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:maxLines="1"
+                        android:paddingRight="5dp"
+                        style="@style/T3"/>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="75dp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/title_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/title_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="제목"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <EditText
+                        android:id="@+id/title"
+                        android:layout_toRightOf="@id/title_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        android:hint="제목을 입력하세요."
+                        style="@style/T3"/>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="75dp"/>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/manager_info_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:text="담당자 정보"
+                    style="@style/T2"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <RelativeLayout
+                    android:id="@+id/academy_name_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:visibility="gone">
+                    <TextView
+                        android:id="@+id/academy_name_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="학원명"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <EditText
+                        android:id="@+id/name"
+                        android:layout_toRightOf="@id/academy_name_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:paddingRight="5dp"
+                        android:inputType="textPersonName"
+                        android:hint="학원 이름을 입력하세요."
+                        style="@style/T3"/>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="75dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/manager_name_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/manager_name_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="담당자명"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <EditText
+                        android:id="@+id/manager_name"
+                        android:layout_toRightOf="@id/manager_name_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:inputType="textPersonName"
+                        android:hint="이름을 입력하세요."
+                        style="@style/T3"/>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="75dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tel_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tel_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:text="연락처"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <LinearLayout
+                        android:id="@+id/tel_type_area"
+                        android:layout_toRightOf="@id/tel_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/tel_number_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/tel"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:paddingRight="5dp"
+                                android:gravity="center_vertical"
+                                android:background="@null"
+                                android:maxLines="1"
+                                android:maxLength="15"
+                                android:inputType="none"
+                                android:editable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint="연락처 입력"
+                                android:textColor="@color/transparent_dark30"
+                                style="@style/T3"
+                                android:layout_weight="1"/>
+
+                            <CheckBox
+                                android:id="@+id/safetyNumer"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="안심번호"
+                                style="@style/T3"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <include layout="@layout/divider_full"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="75dp"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/email_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/email_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="이메일"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_toRightOf="@id/email_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:inputType="textEmailAddress"
+                        android:hint="E-Mail 주소를 입력하세요. (선택)"
+                        style="@style/T3"/>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="75dp"/>
+                </RelativeLayout>
+
+
+
+                <TextView
+                    android:id="@+id/recruit_summary_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:text="모집요강"
+                    style="@style/T2"/>
+
+                <include layout="@layout/divider_full"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/location_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/si_gu_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="근무지역"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <LinearLayout
+                        android:layout_toRightOf="@id/si_gu_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="5dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/si"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center_vertical"
+                            android:background="@null"
+                            android:maxLines="1"
+                            android:hint="도/시 선택"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            style="@style/T3"/>
+
+                        <TextView
+                            android:id="@+id/gu"
+                            android:layout_toRightOf="@id/si"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="left|center_vertical"
+                            android:background="@null"
+                            android:maxLines="1"
+                            android:hint="군/구 선택"
+                            android:layout_weight="1"
+                            android:visibility="invisible"
+                            android:inputType="none"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            style="@style/T3"/>
+
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="75dp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/jobType_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/jobType_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="직종"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <TextView
+                        android:id="@+id/jobType"
+                        android:layout_toRightOf="@id/jobType_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:hint="직종을 선택하세요."
+                        android:inputType="none"
+                        android:editable="false"
+                        style="@style/T3"/>
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="75dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/personnel_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/personnel_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="모집인원"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <TextView
+                        android:id="@+id/personnel"
+                        android:layout_toRightOf="@id/personnel_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:hint="모집인원을 선택하세요."
+                        android:inputType="none"
+                        android:editable="false"
+                        style="@style/T3"/>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="75dp"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/recruit_sector_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/recruit_sector_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="모집분야"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <TextView
+                        android:id="@+id/recruit_sector"
+                        android:layout_toRightOf="@id/recruit_sector_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:hint="모집분야를 선택하세요."
+                        android:maxLines="1"
+                        android:inputType="none"
+                        android:editable="false"
+                        style="@style/T3"/>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="75dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/student_grade_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/student_grade_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="수강대상"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <TextView
+                        android:id="@+id/student_grade"
+                        android:layout_toRightOf="@id/student_grade_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:hint="수강대상을 선택하세요."
+                        android:inputType="none"
+                        android:editable="false"
+                        style="@style/T3"/>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="75dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/division_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/division_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="모집구분"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <TextView
+                        android:id="@+id/division"
+                        android:layout_toRightOf="@id/division_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:hint="모집구분을 선택하세요."
+                        android:inputType="none"
+                        android:editable="false"
+                        style="@style/T3"/>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="75dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lesson_cycle_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/lesson_cycle_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="수업주기"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <TextView
+                        android:id="@+id/lesson_cycle"
+                        android:layout_toRightOf="@id/lesson_cycle_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:hint="수업주기를 선택하세요."
+                        android:inputType="none"
+                        style="@style/T3"/>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="75dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lesson_time_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/lesson_time_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="수업시간"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <TextView
+                        android:id="@+id/lesson_time"
+                        android:layout_toRightOf="@id/lesson_time_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:hint="수업시간을 선택하세요."
+                        android:inputType="none"
+                        style="@style/T3"/>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="75dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/salary_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp" >
+                    <TextView
+                        android:id="@+id/salary_title"
+                        android:layout_centerVertical="true"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="급여조건"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <LinearLayout
+                        android:id="@+id/salary_type_area"
+                        android:layout_toRightOf="@id/salary_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:id="@+id/salary_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <RadioButton
+                                android:id="@+id/deal_salary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="협의후결정"
+                                android:checked="true"
+                                style="@style/T3"/>
+                            <RadioButton
+                                android:id="@+id/annual_salary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="연봉"
+                                style="@style/T3"/>
+
+                            <RadioButton
+                                android:id="@+id/monthly_salary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="월급"
+                                style="@style/T3"/>
+
+                            <RadioButton
+                                android:id="@+id/etc_salary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="수업료지정"
+                                android:visibility="gone"
+                                style="@style/T3"/>
+
+                        </RadioGroup>
+
+
+                        <LinearLayout
+                            android:id="@+id/salary_range_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <EditText
+                                android:id="@+id/salary1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical|right"
+                                android:background="@null"
+                                android:maxLines="1"
+                                android:layout_weight="1"
+                                android:inputType="number"
+                                android:maxLength="6"
+                                style="@style/T3"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:background="@null"
+                                android:maxLines="1"
+                                android:hint=" 만원 ~ "
+                                style="@style/T3"/>
+                            <EditText
+                                android:id="@+id/salary2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical|right"
+                                android:background="@null"
+                                android:maxLines="1"
+                                android:layout_weight="1"
+                                android:inputType="number"
+                                android:maxLength="6"
+                                android:hint=""
+                                style="@style/T3"/>
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:background="@null"
+                                android:maxLines="1"
+                                android:hint=" 만원"
+                                style="@style/T3"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="75dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/end_date_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/end_date_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="채용마감일"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <TextView
+                        android:id="@+id/end_date"
+                        android:layout_toRightOf="@id/end_date_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:inputType="none"
+                        android:editable="false"
+                        android:hint="마감일을 입력하세요."
+                        style="@style/T3"/>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="75dp"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/qualification_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:text="응시자격"
+                    style="@style/T2"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <RelativeLayout
+                    android:id="@+id/career_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/career_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="경력"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <TextView
+                        android:id="@+id/career"
+                        android:layout_toRightOf="@id/career_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:hint="경력을 선택하세요."
+                        android:inputType="none"
+                        android:editable="false"
+                        style="@style/T3"/>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="75dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/education_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/education_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="학력"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <TextView
+                        android:id="@+id/education"
+                        android:layout_toRightOf="@id/education_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:hint="학력을 선택하세요."
+                        android:inputType="none"
+                        android:editable="false"
+                        style="@style/T3"/>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="75dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/gender_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/gender_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="성별"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <TextView
+                        android:id="@+id/gender"
+                        android:layout_toRightOf="@id/gender_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:hint="성별을 선택하세요."
+                        android:inputType="none"
+                        android:editable="false"
+                        style="@style/T3"/>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="80dp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/birthyear_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/birthyear_title"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="나이제한"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/transparent_dark30"
+                        style="@style/T3"/>
+
+                    <TextView
+                        android:id="@+id/birthyear"
+                        android:layout_toRightOf="@id/birthyear_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:hint="나이제한을 입력해주세요."
+                        android:inputType="none"
+                        android:editable="false"
+                        style="@style/T3"/>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="75dp"/>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:text="상세내용"
+                    style="@style/T2"/>
+
+                <include layout="@layout/divider_full"/>
+
+
+                <EditText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:background="@null"
+                    android:layout_weight="1"
+                    android:hint="과목, 지역, 자격증 유무, 경력사항, 등의 추가정보와 채용과 관련된 상세한 내용을 입력해주세요."
+                    style="@style/T3"
+                    android:minHeight="120dp"
+                    android:inputType="textMultiLine"
+                    android:gravity="top"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_isAgree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:text="입력한 정보는 구인•구직 정보 조회시 타인에게 제공될 수 있습니다. 정보제공에 동의하십니까?"
+                            style="@style/T3"
+                            android:textSize="13dp"/>
+
+                        <CheckBox
+                            android:id="@+id/checkbox_isAgree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"
+                            android:checked="true"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <include layout="@layout/progress" />
+</FrameLayout>

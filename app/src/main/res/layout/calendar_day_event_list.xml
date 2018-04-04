@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/calendar_event_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null">
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/event_list_add_event_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@android:color/transparent"
+            android:src="@drawable/calendar_empty_date"/>
+
+        <TextView
+            android:id="@+id/event_list_add_event_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginBottom="80dp"
+            android:textSize="15dp"
+            android:lineSpacingExtra="10dp"
+            android:textColor="@color/text_black"
+            android:text="@string/event_list_add_event_msg" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fab:com.github.clans.fab.FloatingActionMenu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fab_menu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right|bottom"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="55dp"
+    android:layout_marginLeft="0dp"
+    fab:menu_fab_size="normal"
+    fab:menu_colorNormal="#DA4336"
+    fab:menu_colorPressed="#E75043"
+    fab:menu_colorRipple="#99FFFFFF"
+    fab:menu_animationDelayPerItem="20"
+    fab:menu_icon="@drawable/fab_add"
+    fab:menu_buttonSpacing="0dp"
+    fab:menu_labels_margin="15dp"
+    fab:menu_labels_showAnimation="@anim/fab_slide_in_right"
+    fab:menu_labels_hideAnimation="@anim/fab_slide_out_right"
+    fab:menu_labels_paddingTop="4dp"
+    fab:menu_labels_paddingRight="8dp"
+    fab:menu_labels_paddingBottom="4dp"
+    fab:menu_labels_paddingLeft="8dp"
+    fab:menu_labels_padding="8dp"
+    fab:menu_labels_textColor="#FFFFFF"
+    fab:menu_labels_textSize="14sp"
+    fab:menu_labels_cornerRadius="3dp"
+    fab:menu_labels_colorNormal="#f64747"
+    fab:menu_labels_colorPressed="#fd5c5c"
+    fab:menu_labels_colorRipple="#66FFFFFF"
+    fab:menu_labels_showShadow="true"
+    fab:menu_labels_singleLine="false"
+    fab:menu_labels_ellipsize="none"
+    fab:menu_labels_maxLines="-1"
+    fab:menu_labels_style="@style/MenuLabelsStyle"
+    fab:menu_labels_position="left"
+    fab:menu_openDirection="up"
+    fab:menu_backgroundColor="@android:color/transparent"
+    fab:menu_fab_label=""
+    fab:menu_fab_show_animation="@anim/fab_zoom_in"
+    fab:menu_fab_hide_animation="@anim/fab_zoom_out">
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_menu_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/floating_menu_student"
+        fab:fab_size="mini"
+        fab:fab_label="학생등록"
+        fab:fab_colorNormal="#efefef"
+        fab:fab_colorPressed="#d8d8d8"
+        fab:fab_colorRipple="#66ffffff" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_menu_appraise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/floating_menu_grade"
+        fab:fab_size="mini"
+        fab:fab_label="수업평가등록"
+        fab:fab_colorNormal="#efefef"
+        fab:fab_colorPressed="#d8d8d8"
+        fab:fab_colorRipple="#66ffffff" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_menu_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/floating_menu_pay"
+        fab:fab_size="mini"
+        fab:fab_label="수업료등록"
+        fab:fab_colorNormal="#efefef"
+        fab:fab_colorPressed="#d8d8d8"
+        fab:fab_colorRipple="#66ffffff" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_menu_conversation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/floating_menu_conversation"
+        fab:fab_size="mini"
+        fab:fab_label="상담일지등록"
+        fab:fab_colorNormal="#efefef"
+        fab:fab_colorPressed="#d8d8d8"
+        fab:fab_colorRipple="#66ffffff" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_menu_talk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/floating_menu_talk"
+        fab:fab_size="mini"
+        fab:fab_label="튜다톡 등록"
+        fab:fab_colorNormal="#efefef"
+        fab:fab_colorPressed="#d8d8d8"
+        fab:fab_colorRipple="#66ffffff" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_menu_joinedtalk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/floating_menu_my_talk_01"
+        fab:fab_size="mini"
+        fab:fab_label="My톡 &amp; 1:1톡"
+        fab:fab_colorNormal="#efefef"
+        fab:fab_colorPressed="#d8d8d8"
+        fab:fab_colorRipple="#66ffffff" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_menu_schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/floating_menu_calendar"
+        fab:fab_size="mini"
+        fab:fab_label="일반일정 등록"
+        fab:fab_colorNormal="#efefef"
+        fab:fab_colorPressed="#d8d8d8"
+        fab:fab_colorRipple="#66ffffff" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_menu_schedule_lesson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/floating_menu_calendar_class"
+        fab:fab_size="mini"
+        fab:fab_label="수업일정 등록"
+        fab:fab_colorNormal="#efefef"
+        fab:fab_colorPressed="#d8d8d8"
+        fab:fab_colorRipple="#66ffffff" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_menu_job_market_recruit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/floating_menu_job_market"
+        fab:fab_size="mini"
+        fab:fab_label="선생님구해요 등록"
+        fab:fab_colorNormal="#efefef"
+        fab:fab_colorPressed="#d8d8d8"
+        fab:fab_colorRipple="#66ffffff" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_menu_job_market_work"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/floating_menu_job_market_student"
+        fab:fab_size="mini"
+        fab:fab_label="일자리구해요 등록"
+        fab:fab_colorNormal="#efefef"
+        fab:fab_colorPressed="#d8d8d8"
+        fab:fab_colorRipple="#66ffffff" />
+
+</fab:com.github.clans.fab.FloatingActionMenu>

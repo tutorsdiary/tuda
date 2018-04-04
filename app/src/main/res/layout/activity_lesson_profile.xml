@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:paddingBottom="45dp"
+                android:onClick="closeKeyboard"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="수업정보"
+                    android:includeFontPadding="false"
+                    android:layout_weight="1"
+                    style="@style/T2"/>
+
+                <TextView
+                    android:id="@+id/lesson_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:minHeight="48dp"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="15dp"
+                    android:paddingRight="15dp"
+                    android:gravity="left|center_vertical"
+                    android:hint="수업과목"
+                    android:inputType="textMultiLine"
+                    android:lineSpacingExtra="5dp"
+                    android:background="@drawable/round_rect_r2_5"
+                    style="@style/T2"/>
+
+                <TextView
+                    android:id="@+id/student_grade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:minHeight="48dp"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="15dp"
+                    android:paddingRight="15dp"
+                    android:gravity="left|center_vertical"
+                    android:hint="수업대상"
+                    android:inputType="textMultiLine"
+                    android:lineSpacingExtra="5dp"
+                    android:background="@drawable/round_rect_r2_5"
+                    style="@style/T2"/>
+
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/jobType"
+                        android:drawableRight="@drawable/common_select_box_arrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:gravity="center_vertical"
+                        android:hint="직종"
+                        android:background="@drawable/round_rect_r2_5"
+                        android:layout_weight="1"
+                        style="@style/T2"/>
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="match_parent"
+                        android:background="@null" />
+                    <TextView
+                        android:id="@+id/career"
+                        android:drawableRight="@drawable/common_select_box_arrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:gravity="center_vertical"
+                        android:hint="경력"
+                        android:background="@drawable/round_rect_r2_5"
+                        android:layout_weight="1"
+                        style="@style/T2"/>
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="수업지역"
+                    android:includeFontPadding="false"
+                    android:layout_weight="1"
+                    style="@style/T2"/>
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/si"
+                        android:drawableRight="@drawable/common_select_box_arrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:gravity="center_vertical"
+                        android:hint="시/도"
+                        android:background="@drawable/round_rect_r2_5"
+                        android:layout_weight="1"
+                        style="@style/T2"/>
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="match_parent"
+                        android:background="@null" />
+                    <TextView
+                        android:id="@+id/gu"
+                        android:drawableRight="@drawable/common_select_box_arrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:gravity="center_vertical"
+                        android:hint="시/군/구"
+                        android:background="@drawable/round_rect_r2_5"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        style="@style/T2"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sigu_area2"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/si2"
+                        android:drawableRight="@drawable/common_select_box_arrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:gravity="center_vertical"
+                        android:hint="시/도"
+                        android:background="@drawable/round_rect_r2_5"
+                        android:layout_weight="1"
+                        style="@style/T2"/>
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="match_parent"
+                        android:background="@null" />
+                    <TextView
+                        android:id="@+id/gu2"
+                        android:drawableRight="@drawable/common_select_box_arrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:gravity="center_vertical"
+                        android:hint="시/군/구"
+                        android:background="@drawable/round_rect_r2_5"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        style="@style/T2"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sigu_area3"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/si3"
+                        android:drawableRight="@drawable/common_select_box_arrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:gravity="center_vertical"
+                        android:hint="시/도"
+                        android:background="@drawable/round_rect_r2_5"
+                        android:layout_weight="1"
+                        style="@style/T2"/>
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="match_parent"
+                        android:background="@null" />
+                    <TextView
+                        android:id="@+id/gu3"
+                        android:drawableRight="@drawable/common_select_box_arrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:gravity="center_vertical"
+                        android:hint="시/군/구"
+                        android:background="@drawable/round_rect_r2_5"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        style="@style/T2"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:gravity="center" >
+                    <ImageView
+                        android:id="@+id/plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:src="@drawable/join_selectbox_plus"
+                        android:visibility="invisible"/>
+                    <ImageView
+                        android:id="@+id/minus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/join_selectbox_minus"
+                        android:visibility="invisible"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/abort_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/abort_input"
+                    android:includeFontPadding="false"
+                    android:layout_weight="1"
+                    style="@style/T2"
+                    android:textColor="@color/point_color_2"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12.5dp"
+        android:layout_marginLeft="12.5dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="bottom|right" >
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/join_next_btn"
+            android:layout_alignParentRight="true"
+            android:background="@null" />
+
+    </RelativeLayout>
+</FrameLayout>

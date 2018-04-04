@@ -1,0 +1,154 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <TextView
+                        android:id="@+id/txt_request"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/function_request_select_type"
+                        android:drawablePadding="11dp"
+                        android:text="문의유형선택"
+                        style="@style/T4"/>
+
+                    <TextView
+                        android:id="@+id/request_type"
+                        android:layout_toRightOf="@id/txt_request"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="5dp"
+                        android:drawableRight="@drawable/common_select_box_arrow"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:hint="선택하세요."
+                        android:inputType="none"
+                        style="@style/T3"/>
+                </RelativeLayout>
+
+                <include layout="@layout/divider_full"/>
+
+                <EditText
+                    android:id="@+id/edit_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/job_market_cs_company_name"
+                    android:drawablePadding="11dp"
+                    android:hint="업체명"
+                    style="@style/T3"
+                    android:singleLine="true"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <EditText
+                    android:id="@+id/edit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/common_gender"
+                    android:drawablePadding="11dp"
+                    android:hint="담당자 이름"
+                    style="@style/T3"
+                    android:singleLine="true"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <EditText
+                    android:id="@+id/edit_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/student_student_info_cellphone"
+                    android:drawablePadding="11dp"
+                    android:hint="담당자 연락처"
+                    style="@style/T3"
+                    android:maxLength="11"
+                    android:inputType="number"
+                    android:singleLine="true"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <EditText
+                    android:id="@+id/edit_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/common_mail"
+                    android:drawablePadding="11dp"
+                    android:hint="담당자 이메일 (선택)"
+                    style="@style/T4"
+                    android:singleLine="true"
+                    android:inputType="textEmailAddress"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <EditText
+                    android:id="@+id/edit_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@null"
+                    android:hint="자세한 내용을 입력해주세요.\n입력한 정보는 튜다 관리자에게 전달됩니다."
+                    style="@style/T3"
+                    android:minLines="5"
+                    android:maxLines="20"
+                    android:gravity="top"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <Button
+                    android:id="@+id/btn_regist"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/formbutton_selector_square"
+                    android:text="문의완료"
+                    style="@style/T5"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

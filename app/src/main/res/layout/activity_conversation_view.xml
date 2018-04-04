@@ -1,0 +1,79 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/reg_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12.5dp"
+                    android:layout_marginRight="12.5dp"
+                    android:layout_gravity="right"
+                    android:gravity="center_vertical"
+                    android:text="2015-10-12 13:00:00 작성됨"
+                    style="@style/T7"/>
+
+                <TextView
+                    android:id="@+id/text_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/common_student_default"
+                    android:drawablePadding="11dp"
+                    style="@style/T3"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <TextView
+                    android:id="@+id/text_conversationday"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    style="@style/T3"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <TextView
+                    android:id="@+id/text_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="60dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    style="@style/T3"/>
+
+                <include layout="@layout/divider_full"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

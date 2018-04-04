@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate
+        android:fromXDelta="0%p"
+        android:toXDelta="100%p"
+        android:duration="@android:integer/config_longAnimTime" />
+
+    <rotate
+        android:duration="@android:integer/config_longAnimTime"
+        android:fromDegrees="0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toDegrees="360" />
+
+    <alpha
+        android:duration="@android:integer/config_longAnimTime"
+        android:fromAlpha="1.0"
+        android:toAlpha="0.0" />
+</set>

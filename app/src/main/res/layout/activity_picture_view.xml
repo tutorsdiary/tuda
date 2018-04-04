@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gesture-image="http://schemas.polites.com/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.GestureImageView.GestureImageView
+            android:id="@+id/picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            gesture-image:min-scale="0.8"
+            gesture-image:max-scale="7.0"
+            gesture-image:strict="false"/>
+    </LinearLayout>
+
+    <com.tuda.teacher.ui.view.TudaToolBar
+        android:id="@+id/tuda_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+    <LinearLayout
+        android:id="@+id/layout_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageButton
+            android:id="@+id/btn_download"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/talk_send_photo_save"
+            android:background="@null"/>
+
+        <ImageButton
+            android:id="@+id/btn_delete"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="75dp"
+            android:src="@drawable/talk_send_photo_delete"
+            android:background="@null"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,244 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tuda_toolbar"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:drawSelectorOnTop="false"
+            android:transcriptMode="disabled"
+            android:layout_marginBottom="1dp"
+            android:scrollbars="none"/>
+
+        <include layout="@layout/divider_full" />
+
+        <LinearLayout
+            android:id="@+id/area_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center_vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageButton
+                android:id="@+id/btn_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="12.5dp"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/talk_write_photo"
+                android:background="@null"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12.5dp"
+                android:layout_marginRight="12.5dp"
+                android:background="@color/divider"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:hint="@string/talk_input_message"
+                    android:includeFontPadding="false"
+                    android:background="@drawable/xml_rect_stroke"
+                    style="@style/T5"
+                    android:inputType="textMultiLine"
+                    android:minLines="1"
+                    android:maxLines="3"
+                    android:singleLine="false"/>
+
+                <Button
+                    android:id="@+id/send_message"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom|right"
+                    android:background="@color/point_color_2"
+                    android:text="전송"
+                    style="@style/T5"
+                    android:textSize="10.5dp"
+                    android:textColor="@color/white"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 사진 첨부 영역 -->
+        <LinearLayout
+            android:id="@+id/area_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/btn_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:gravity="center"
+                android:drawableTop="@drawable/talk_send_photo_select_library"
+                android:drawablePadding="7dp"
+                android:text="사진"
+                style="@style/T6"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/btn_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:padding="12dp"
+                android:gravity="center"
+                android:drawableTop="@drawable/talk_send_photo_select_camera"
+                android:drawablePadding="7dp"
+                android:text="카메라"
+                style="@style/T6"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/error_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/my_talk_empty_join"
+            android:drawablePadding="10dp"
+            android:text="@string/talk_list_item_empty"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <!-- 이미지보기(닫힌상태) 레이어 -->
+    <RelativeLayout
+        android:id="@+id/btn_question_open"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tuda_toolbar"
+        android:tag="open"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/solution_open"/>
+    </RelativeLayout>
+
+    <!-- 이미지보기(열린상태) 레이어 -->
+    <LinearLayout
+        android:layout_below="@+id/tuda_toolbar"
+        android:id="@+id/layout_question"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="58dp"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/talklist_origin_info"></include>
+
+                </LinearLayout>
+            </ScrollView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#2c3e50"/>
+            <RelativeLayout
+                android:id="@+id/btn_question_close"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="31dp"
+                android:tag="close">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/solution_close"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <View
+            android:id="@+id/btn_question_close2"
+            android:tag="close"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <com.tuda.teacher.ui.view.TudaToolBar
+        android:id="@+id/tuda_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/actionbar_height"/>
+
+    <View
+        android:id="@+id/dummy_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"/>
+
+</RelativeLayout>

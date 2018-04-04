@@ -1,0 +1,176 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11.5dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center">
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:background="@null">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/btn_notice"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:tag="notice">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/etc_menu_notice_selector"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11.5dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:text="공지사항"
+                            style="@style/T6"
+                            android:textColor="@color/transparent_20"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btn_sms"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:tag="sms">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/etc_menu_sms_selector"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11.5dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:text="SMS내역"
+                            style="@style/T6"
+                            android:textColor="@color/transparent_20"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btn_request"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:tag="request">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/etc_menu_function_request_selector"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11.5dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:text="고객센터"
+                            style="@style/T6"
+                            android:textColor="@color/transparent_20"/>
+                    </RelativeLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp">
+
+                    <RelativeLayout
+                        android:id="@+id/btn_mypage"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:tag="mypage">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/etc_menu_my_page_selector"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11.5dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:text="마이페이지"
+                            style="@style/T6"
+                            android:textColor="@color/transparent_20"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btn_config"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:tag="config">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/etc_menu_setting_selector"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="23dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/common_new"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11.5dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:text="환경설정"
+                            style="@style/T6"
+                            android:textColor="@color/transparent_20"/>
+                    </RelativeLayout>
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.tuda.teacher.ui.view.CustomNoticeView
+        android:id="@+id/customNoticeView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

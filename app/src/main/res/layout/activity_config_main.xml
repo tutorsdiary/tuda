@@ -1,0 +1,795 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.tuda.teacher.ui.view.TudaToolBar
+        android:id="@+id/tuda_toolbar"
+        android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/tuda_toolbar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.tuda.teacher.ui.view.HeaderRowView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/headerrow_height"
+                app:rowTitle="앱 설정" />
+
+            <RelativeLayout
+                android:id="@+id/area_autolock"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:tag="autolock">
+
+                <TextView
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:text="철통보안! 앱을 잠금처리 할까요?" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switch_autolock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:checked="true"
+                    android:tag="autolock" />
+            </RelativeLayout>
+
+            <include layout="@layout/divider_full" />
+
+            <RelativeLayout
+                android:id="@+id/area_lockpassword"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:tag="lockpassword">
+
+                <TextView
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="잠금 비밀번호를 설정하시겠어요?" />
+
+                <ImageButton
+                    android:id="@+id/btn_lockpassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/setting_enter"
+                    android:tag="lockpassword" />
+            </RelativeLayout>
+
+            <include layout="@layout/divider_full" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="테마 색깔을 변경해 볼까요?" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/theme_color_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@color/theme_color_1"
+                            android:padding="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/theme_color_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@color/theme_color_2"
+                            android:padding="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/theme_color_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@color/theme_color_3"
+                            android:padding="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/theme_color_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@color/theme_color_4"
+                            android:padding="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/theme_color_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@color/theme_color_5"
+                            android:padding="10dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <include layout="@layout/divider_full" />
+
+            <com.tuda.teacher.ui.view.HeaderRowView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/headerrow_height"
+                app:rowTitle="알림 설정" />
+
+            <RelativeLayout
+                android:id="@+id/area_alarm_use_service"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:tag="alarm_use_service">
+
+                <TextView
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="서비스 알림을 받으시겠어요?" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switch_alarm_use_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:checked="true"
+                    android:tag="alarm_use_service" />
+            </RelativeLayout>
+
+            <include layout="@layout/divider_full" />
+
+            <RelativeLayout
+                android:id="@+id/area_alarm_use_talk"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:tag="alarm_use_talk">
+
+                <TextView
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="튜다톡 알림을 받으시겠어요?" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switch_alarm_use_talk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:checked="true"
+                    android:tag="alarm_use_talk" />
+            </RelativeLayout>
+
+            <include layout="@layout/divider_full" />
+
+            <RelativeLayout
+                android:id="@+id/area_alarm_use_note"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:tag="alarm_use_note">
+
+                <TextView
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="쪽지 알림을 받으시겠어요?" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switch_alarm_use_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:checked="true"
+                    android:tag="alarm_use_note" />
+            </RelativeLayout>
+
+            <include layout="@layout/divider_full" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp">
+
+                <RelativeLayout
+                    android:id="@+id/area_alarm_use_snooze"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center_vertical"
+                    android:tag="alarm_use_snooze">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/T4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="방해 금지 시간 설정" />
+
+                        <TextView
+                            style="@style/T4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:includeFontPadding="false"
+                            android:text="해당 시간대에는 알림이 울리지 않습니다."
+                            android:textSize="9dp" />
+                    </LinearLayout>
+
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/switch_alarm_use_snooze"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:checked="false"
+                        android:tag="alarm_use_snooze" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_snooze_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txt_snooze_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawablePadding="19dp"
+                        android:drawableRight="@drawable/common_select_box_arrow"
+                        android:text="시작" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="~" />
+
+                    <TextView
+                        android:id="@+id/txt_snooze_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:drawablePadding="19dp"
+                        android:drawableRight="@drawable/common_select_box_arrow"
+                        android:text="종료" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <include layout="@layout/divider_full" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp">
+
+                <TextView
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="알림 방법" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/check_alarm_sound"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:tag="sound" />
+
+                    <TextView
+                        style="@style/T4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:text="소리" />
+
+                    <CheckBox
+                        android:id="@+id/check_alarm_vibration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:tag="vibration" />
+
+                    <TextView
+                        style="@style/T4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="진동" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <include layout="@layout/divider_full" />
+
+            <RelativeLayout
+                android:id="@+id/area_alarm_use_lesson"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:tag="alarm_use_lesson"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="수업 시작과 종료를 알려드릴까요?" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switch_alarm_use_lesson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:checked="false"
+                    android:tag="alarm_use_lesson" />
+            </RelativeLayout>
+
+            <include
+                layout="@layout/divider_full"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="언제 알려드릴까요?" />
+
+                <Spinner
+                    android:id="@+id/spin_alarm_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:spinnerMode="dialog" />
+            </RelativeLayout>
+
+            <include
+                layout="@layout/divider_full"
+                android:visibility="gone" />
+
+            <com.tuda.teacher.ui.view.HeaderRowView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/headerrow_height"
+                app:rowTitle="로그인 설정" />
+
+            <RelativeLayout
+                android:id="@+id/area_autologin"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:tag="autologin">
+
+                <TextView
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/mypage_auto_login" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switch_autologin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:checked="true"
+                    android:tag="autologin" />
+            </RelativeLayout>
+
+            <include layout="@layout/divider_full" />
+
+            <RelativeLayout
+                android:id="@+id/area_facebook"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:tag="facebook">
+
+                <TextView
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="Facebook으로 로그인 하시겠어요?" />
+
+                <ImageButton
+                    android:id="@+id/btn_facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:src="@drawable/setting_facebook_off"
+                    android:tag="facebook" />
+            </RelativeLayout>
+
+            <include layout="@layout/divider_full" />
+
+            <!--RelativeLayout
+                android:id="@+id/area_kakao"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:gravity="center_vertical"
+                android:tag="kakao">
+
+                <TextView
+                    android:id="@+id/txt_kakao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Kakao로 로그인 하시겠어요?"
+                    android:includeFontPadding="false"
+                    style="@style/T4"/>
+
+                <com.tuda.teacher.snslib.CustomKakaoConnectButton
+                    android:id="@+id/com_kakao_login"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"/>
+
+                <ImageButton
+                    android:id="@+id/btn_kakao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/setting_kakao_on"
+                    android:background="@null"
+                    android:tag="kakao"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <include layout="@layout/divider_full"/-->
+
+            <RelativeLayout
+                android:id="@+id/area_naver"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:tag="naver">
+
+                <TextView
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="Naver로 로그인 하시겠어요?" />
+
+                <ImageButton
+                    android:id="@+id/btn_naver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:src="@drawable/setting_naver_off"
+                    android:tag="naver" />
+            </RelativeLayout>
+
+            <include layout="@layout/divider_full" />
+
+            <com.tuda.teacher.ui.view.HeaderRowView
+                android:id="@+id/header_weather_location"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/headerrow_height"
+                app:rowTitle="일정관리 설정" />
+
+            <RelativeLayout
+                android:id="@+id/area_weather_location"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:tag="weather_location">
+
+                <TextView
+                    android:id="@+id/txt_weather_location"
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="날씨 지역을 바꿀래요~" />
+
+                <TextView
+                    android:id="@+id/weather_location"
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:includeFontPadding="false" />
+            </RelativeLayout>
+
+            <include layout="@layout/divider_full" />
+
+            <com.tuda.teacher.ui.view.HeaderRowView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/headerrow_height"
+                app:rowTitle="추가정보" />
+
+            <RelativeLayout
+                android:id="@+id/area_terms"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:tag="terms">
+
+                <TextView
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="이용약관을 보고 싶어요~" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/setting_enter" />
+            </RelativeLayout>
+
+            <include layout="@layout/divider_full" />
+
+            <RelativeLayout
+                android:id="@+id/area_marketAgree"
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:tag="marketAgree">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="50dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/T4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="마케팅 또는 이벤트 등을 위한 SMS 및 이메일의 수신에 동의하십니까?"
+                        android:textSize="11.5dp" />
+
+                    <TextView
+                        style="@style/T4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:includeFontPadding="false"
+                        android:text="제공 동의를 하지 않으셔도 서비스 이용에는 문제가 없습니다."
+                        android:textSize="9dp" />
+                </LinearLayout>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switch_marketAgree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:checked="true"
+                    android:tag="marketAgree" />
+            </RelativeLayout>
+
+            <include layout="@layout/divider_full" />
+
+            <RelativeLayout
+                android:id="@+id/area_withdraw"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:tag="withdraw">
+
+                <TextView
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="탈퇴 하시겠어요?" />
+            </RelativeLayout>
+
+            <include layout="@layout/divider_full" />
+
+            <RelativeLayout
+                android:id="@+id/area_readprocess"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:tag="readprocess">
+
+                <TextView
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="모든 튜다톡, 알림을 읽음처리 할래요~" />
+            </RelativeLayout>
+
+            <include layout="@layout/divider_full" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp">
+
+                <TextView
+                    android:id="@+id/version"
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="앱 버전이 어떻게 되나요?" />
+
+                <TextView
+                    android:id="@+id/text_version"
+                    style="@style/T4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/version"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <include layout="@layout/divider_full" />
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

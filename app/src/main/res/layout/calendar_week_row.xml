@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/calendar_week_days"
+        android:orientation="horizontal"
+        android:weightSum="7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0.5dp"
+        android:background="@drawable/calendar_week_view_topline"
+        android:visibility="gone"
+        >
+        <com.tuda.teacher.calendar.widget.CalendarDayView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:isScrollContainer="false"
+            android:layout_weight="1"/>
+        <com.tuda.teacher.calendar.widget.CalendarDayView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:isScrollContainer="false"
+            android:layout_weight="1"/>
+        <com.tuda.teacher.calendar.widget.CalendarDayView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:isScrollContainer="false"
+            android:layout_weight="1"/>
+        <com.tuda.teacher.calendar.widget.CalendarDayView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:isScrollContainer="false"
+            android:layout_weight="1"/>
+        <com.tuda.teacher.calendar.widget.CalendarDayView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:isScrollContainer="false"
+            android:layout_weight="1"/>
+        <com.tuda.teacher.calendar.widget.CalendarDayView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:isScrollContainer="false"
+            android:layout_weight="1"/>
+        <com.tuda.teacher.calendar.widget.CalendarDayView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:isScrollContainer="false"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/expandable_contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:background="#f6f6f6"
+        android:visibility="gone">
+    </FrameLayout>
+
+</LinearLayout>

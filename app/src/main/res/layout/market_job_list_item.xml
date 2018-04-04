@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/title_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:paddingLeft="12.5dp"
+            android:paddingRight="12.5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/recruitType"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginRight="6dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:textSize="9dp"
+                android:includeFontPadding="false"
+                android:background="@drawable/job_market_oval_solid_red_r7_recruit_type"
+                style="@style/T5"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:ellipsize="end"
+                android:maxLines="1"
+                style="@style/T2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/name_area"
+            android:layout_below="@id/title_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="12.5dp"
+            android:paddingRight="12.5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/academyType"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginRight="6dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:textSize="9dp"
+                android:includeFontPadding="false"
+                android:background="@drawable/job_market_oval_stroke_blue_r7"
+                style="@style/T5"
+                android:textColor="@color/point_color_2"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                style="@style/T2"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/summary"
+            android:layout_below="@id/name_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="12.5dp"
+            android:layout_marginRight="12.5dp"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            style="@style/T6_big"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/endDate"
+            android:layout_below="@id/summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="12.5dp"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            style="@style/T6_big"/>
+
+        <TextView
+            android:id="@+id/viewCount"
+            android:layout_below="@id/summary"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="12.5dp"
+            android:layout_marginTop="12.5dp"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:text="조회수 : 0"
+            style="@style/T6_big"
+            android:layout_weight="1"
+            android:textColor="@color/transparent_dark20"/>
+
+        <TextView
+            android:id="@+id/iconNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12.5dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="NEW"
+            android:textSize="9dp"
+            android:textColor="@color/white"
+            android:includeFontPadding="false"
+            android:background="@drawable/talk_list_new"
+            style="@style/T5"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/endDate"
+            android:layout_marginTop="14dp"
+            android:background="@color/divider"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+    </RelativeLayout>
+
+</FrameLayout>

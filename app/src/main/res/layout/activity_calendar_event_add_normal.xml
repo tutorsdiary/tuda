@@ -1,0 +1,347 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <EditText
+                android:id="@+id/calendar_event_title"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:hint="일정 제목을 입력해주세요."
+                android:background="@null"
+                android:inputType="text"
+                style="@style/T3"
+                android:singleLine="true"/>
+
+            <include layout="@layout/divider_full"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/calendar_event_date_title"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="90dp"
+                    android:layout_height="28dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:inputType="date"
+                    android:text="날짜 선택"
+                    style="@style/T5" />
+
+                <TextView
+                    android:id="@+id/select_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:layout_marginLeft="100dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:drawableRight="@drawable/setting_enter"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical|right"
+                    android:background="@null"
+                    android:text="캘린더"
+                    android:textColor="@color/point_color_2"
+                    style="@style/T3" />
+
+                <LinearLayout
+                    android:id="@+id/calendar_event_start_date_area"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/calendar_event_date_title"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12.5dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="시작"
+                        style="@style/T3"
+                        android:textColor="@color/point_color_1"
+                        android:inputType="date"/>
+
+                    <TextView
+                        android:id="@+id/calendar_event_start_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="12dp"
+                        android:gravity="center_vertical"
+                        android:text="2015년 12월 14일"
+                        style="@style/T3"
+                        android:inputType="date"/>
+
+                    <TextView
+                        android:id="@+id/calendar_event_start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="12dp"
+                        android:gravity="center_vertical"
+                        android:text="오전 20:30"
+                        style="@style/T3"
+                        android:inputType="time"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/calendar_event_start_date_area"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12.5dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="종료"
+                        style="@style/T3"
+                        android:textColor="@color/point_color_1"
+                        android:inputType="date"/>
+
+                    <TextView
+                        android:id="@+id/calendar_event_end_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="12dp"
+                        android:gravity="center_vertical"
+                        android:text="2015년 12월 14일"
+                        style="@style/T3"
+                        android:inputType="date"/>
+
+                    <TextView
+                        android:id="@+id/calendar_event_end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="12dp"
+                        android:gravity="center_vertical"
+                        android:text="오후 20:30"
+                        style="@style/T3"
+                        android:inputType="time"/>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <include layout="@layout/divider_full"/>
+
+            <LinearLayout
+                android:id="@+id/allday_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/calendar_event_all_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:layout_alignParentRight="true"
+                    app:switchPadding="10dp"
+                    android:gravity="left|center_vertical"
+                    android:background="@null"
+                    android:text="종일일정"
+                    style="@style/T3"
+                    android:tag="allday"/>
+
+                <include layout="@layout/divider_full"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/calendar_event_repeat"
+                android:text="일정반복"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:checked="false"
+                style="@style/T3"
+                android:tag="repeat" />
+
+            <TextView
+                android:id="@+id/calendar_event_repeat_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:paddingBottom="20dp"
+                android:gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="30dp"
+                android:textSize="14dp"
+                android:text=""
+                android:visibility="gone"
+                style="@style/T3"/>
+
+            <include layout="@layout/divider_full"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/calendar_event_attendee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1.25dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:minWidth="200dp"
+                    android:minHeight="60dp">
+                    <TextView
+                        android:id="@+id/attendee_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:hint="참석자를 선택하세요."
+                        android:textSize="14dp"
+                        style="@style/T3"/>
+
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btn_add_student"
+                    android:text="참석자 선택"
+                    android:layout_width="75dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_marginRight="12.5dp"
+                    android:scaleType="center"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:textSize="11dp"
+                    style="@style/T5"
+                    android:background="@drawable/formbutton_selector" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/reminder_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:visibility="gone"
+                android:gravity="center_vertical">
+
+                <org.apmem.tools.layouts.FlowLayout
+                    android:id="@+id/calendar_event_reminder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:layout_marginRight="70dp"
+                    app:layoutDirection="ltr"
+                    android:minHeight="60dp">
+                    <TextView
+                        android:id="@+id/reminder_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:hint="미리알림 없음"
+                        android:textSize="14dp"
+                        style="@style/T3"/>
+
+                </org.apmem.tools.layouts.FlowLayout>
+
+                <ImageButton
+                    android:id="@+id/btn_add_reminder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+                    android:scaleType="center"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/calendar_add_student"
+                    android:textSize="11dp"
+                    style="@style/T5"
+                    android:background="@null" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/divider_full"/>
+
+
+            <EditText
+                android:id="@+id/calendar_event_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:minHeight="60dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:includeFontPadding="false"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="5dp"
+                android:hint="기억해야 하는 메모가 있나요?"
+                android:background="@null"
+                android:isScrollContainer="true"
+                android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
+                android:capitalize="sentences"
+                android:maxLength="2048"
+                style="@style/T3" />
+
+
+        </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</FrameLayout>

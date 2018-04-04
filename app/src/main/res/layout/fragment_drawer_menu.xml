@@ -1,0 +1,216 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/area_profile"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@color/point_color_2"
+            android:gravity="left|top">
+
+
+            <ImageView
+                android:id="@+id/img_photo"
+                android:layout_width="47.5dp"
+                android:layout_height="47.5dp"
+                android:layout_marginTop="32.5dp"
+                android:layout_marginLeft="16dp"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:id="@+id/txt_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="47.5dp"
+                android:layout_marginTop="32.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/img_photo"
+                android:gravity="center_vertical"
+                android:text="..."
+                style="@style/T3"
+                android:textColor="@color/text_white"/>
+
+            <TextView
+                android:id="@+id/btn_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="12.5dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="18dp"
+                android:drawableLeft="@drawable/home_top_setting"
+                android:drawablePadding="4dp"
+                android:text="설정"
+                style="@style/T3"
+                android:textColor="@color/text_white"
+                android:gravity="center_vertical"
+                android:tag="setting"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="12dp"
+                android:layout_toLeftOf="@+id/btn_setting">
+
+                <TextView
+                    android:id="@+id/btn_alarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/talk_notification_on"
+                    android:drawablePadding="4dp"
+                    android:text="알림"
+                    style="@style/T3"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:tag="alarm"
+                    android:layout_alignParentTop="true"/>
+
+                <ImageView
+                    android:id="@+id/icon_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="13dp"
+                    android:paddingBottom="25dp"
+                    android:src="@drawable/menu_new"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:paddingTop="9dp"
+            android:paddingBottom="9dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/btn_schedule_today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="schedule_today">
+
+                <TextView
+                    android:id="@+id/txt_schedule_today_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txt_schedule_today"
+                    android:includeFontPadding="false"
+                    android:layout_centerHorizontal="true"
+                    android:text="0"
+                    style="@style/T2"
+                    android:textColor="@color/transparent_dark50"/>
+
+                <TextView
+                    android:id="@+id/txt_schedule_today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:gravity="top"
+                    android:text="오늘일정"
+                    style="@style/T6_small"
+                    android:textColor="@color/transparent_dark20"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_talk_unread"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="talk_unread">
+
+                <TextView
+                    android:id="@+id/txt_talk_unread"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:includeFontPadding="false"
+                    android:text="안읽은톡"
+                    style="@style/T6_small"
+                    android:textColor="@color/transparent_dark20"/>
+
+                <TextView
+                    android:id="@+id/txt_talk_unread_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txt_talk_unread"
+                    android:layout_centerHorizontal="true"
+                    android:includeFontPadding="false"
+                    android:text="0"
+                    style="@style/T2"
+                    android:textColor="@color/transparent_dark50"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="note">
+
+                <TextView
+                    android:id="@+id/txt_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:includeFontPadding="false"
+                    android:text="쪽지"
+                    style="@style/T6_small"
+                    android:textColor="@color/transparent_dark20"/>
+
+                <TextView
+                    android:id="@+id/txt_note_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txt_note"
+                    android:layout_centerHorizontal="true"
+                    android:includeFontPadding="false"
+                    android:text="0"
+                    style="@style/T2"
+                    android:textColor="@color/transparent_dark50"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ExpandableListView
+                android:id="@+id/menu_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:dividerHeight="0.5dp"
+                android:childDivider="#f6f6f6"
+                android:divider="#f6f6f6"
+                android:groupIndicator="@null" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <com.tuda.teacher.ui.view.CustomNoticeView
+        android:id="@+id/customNoticeView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</FrameLayout>

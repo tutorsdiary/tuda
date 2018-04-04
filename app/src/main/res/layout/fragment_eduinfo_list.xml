@@ -1,0 +1,60 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/area_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.FunctionMenuView
+            android:id="@+id/functionmenu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/function_menu_height"
+            app:menuType="eduinfo"/>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:id="@android:id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null"
+                    android:dividerHeight="0.5dp"
+                    android:drawSelectorOnTop="false"
+                    android:scrollbars="none"/>
+
+                <LinearLayout
+                    android:id="@+id/error_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="35dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txt_error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/empty_info_edu"
+                        android:drawablePadding="10dp"
+                        android:text="@string/simsim_list_item_empty"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </FrameLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <include layout="@layout/progress" />
+</FrameLayout>

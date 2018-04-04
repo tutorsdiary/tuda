@@ -1,0 +1,261 @@
+import java.util.regex.Pattern
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'io.fabric.tools:gradle:1.+'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+//apply plugin: 'com.neenbedankt.android-apt'
+
+repositories {
+    jcenter()
+    maven { url 'https://github.com/donnfelker/mvn-repo/raw/master/' }
+    maven { url "https://jitpack.io" }
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url 'http://devrepo.kakao.com:8088/nexus/content/groups/public/' }
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '26.0.2'
+    flavorDimensions "default"
+    defaultConfig {
+        applicationId "com.tuda.teacher"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 20014
+        versionName "2.0.14"
+        multiDexEnabled true
+    }
+
+    dexOptions {
+        jumboMode = true
+        javaMaxHeapSize "4g"
+//        preDexLibraries = false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'META-INF/services/org.codehaus.groovy.runtime.ExtensionModule'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        //exclude 'LICENSE.txt'
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        debug {
+//            zipAlignEnabled true
+//            debuggable true
+            //instant run 작동시에는 proguard 적용 안됨
+            //applicationIdSuffix '.debug'
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            //applicationIdSuffix '.release'
+            zipAlignEnabled true
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //applicationVariants.all { variant ->
+    //    variant.outputs.each { output ->
+    //        def outputFile = output.outputFile
+    //        if (outputFile != null && outputFile.name.endsWith('.apk')) {
+    //            def fileName = outputFile.name.replace('app', "TUDA")
+    //            fileName = fileName.replace('.apk', "-${versionName}-${versionCode}.apk")
+    //            output.outputFile = new File(outputFile.parent, fileName)
+    //        }
+    //    }
+    //}
+
+    productFlavors {
+        devel {
+            Properties properties = new Properties()
+            properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+            def host_addr = properties.getProperty('DEFAULT_HOST_ADDR')
+            def host_port = properties.getProperty('DEFAULT_HOST_PORT')
+            def img_host_addr = properties.getProperty('DEFAULT_IMG_HOST_ADDR')
+            def min_sdk_version = properties.getProperty('MIN_SDK_VERSION')
+
+            if (host_addr == null || host_addr.trim() == "")
+                host_addr = getIP();
+
+            if (host_addr == null || host_addr.trim() == "")
+                host_addr = "api.tuda.kr";
+
+            if (host_port == null || host_port.trim() == "")
+                host_port = "80"
+
+            if (img_host_addr == null || img_host_addr.trim() == "")
+                img_host_addr = "img1.tuda.kr";
+
+            if (min_sdk_version == null || min_sdk_version.trim() == "")
+                minSdkVersion min_sdk_version
+
+            buildConfigField 'String', 'DEFAULT_HOST_ADDR', '"http://' + host_addr + ':' + host_port + '"'
+            buildConfigField 'String', 'DEFAULT_IMG_HOST_ADDR', '"http://' + img_host_addr + '"'
+        }
+
+        product {
+            buildConfigField 'String', 'DEFAULT_HOST_ADDR', '"http://api.tuda.kr:80"'
+            buildConfigField 'String', 'DEFAULT_IMG_HOST_ADDR', '"http://img1.tuda.kr"'
+        }
+    }
+}
+
+// Get the ip address
+def getIP() {
+    InetAddress result = null;
+    Enumeration<NetworkInterface> networkInterfaces = NetworkInterface.getNetworkInterfaces();
+    while (networkInterfaces.hasMoreElements()) {
+        Enumeration<InetAddress> addresses = networkInterfaces.nextElement().getInetAddresses();
+        while (addresses.hasMoreElements()) {
+            InetAddress address = addresses.nextElement();
+            if (!address.isLoopbackAddress()) {
+                if (address.isSiteLocalAddress()) {
+                    return address.getHostAddress();
+                } else if (result == null) {
+                    result = address;
+                }
+            }
+        }
+    }
+
+    return (result != null ? result : InetAddress.getLocalHost()).getHostAddress();
+}
+
+
+task setAndroidManifestVersionCode {
+    doLast {
+        def manifestFile = file("src/main/AndroidManifest.xml")
+        def pattern = Pattern.compile("versionCode=\"(\\d+)\"")
+        def manifestText = manifestFile.getText("UTF-8")
+        def matcher = pattern.matcher(manifestText)
+        matcher.find()
+        println "Setting version code to ${android.defaultConfig.versionCode}"
+        def manifestContent = matcher.replaceAll("versionCode=\"${android.defaultConfig.versionCode}\"")
+        manifestFile.write(manifestContent, "UTF-8")
+    }
+}
+
+task setAndroidManifestVersionName {
+    doLast {
+        def manifestFile = file("src/main/AndroidManifest.xml")
+        def patternVersionNumber = Pattern.compile("versionName=\"(.*)\"")
+        def manifestText = manifestFile.getText("UTF-8")
+        def matcherVersionNumber = patternVersionNumber.matcher(manifestText)
+        matcherVersionNumber.find()
+        println "Setting version name to ${android.defaultConfig.versionName}"
+        def manifestContent = matcherVersionNumber.replaceAll("versionName=\"${android.defaultConfig.versionName}\"")
+        manifestFile.write(manifestContent, "UTF-8")
+    }
+}
+
+tasks.whenTaskAdded { task ->
+    if (task.name == 'generateReleaseBuildConfig' || task.name == 'generateDebugBuildConfig'
+            || task.name == 'generateProductReleaseBuildConfig' || task.name == 'generateDevelDebugBuildConfig') {
+        task.dependsOn 'setAndroidManifestVersionCode'
+        task.dependsOn 'setAndroidManifestVersionName'
+    }
+}
+
+dependencies {
+    def supportLibVersion = "27.0.2"
+    def googleGmsVersion = "11.8.0"
+    def jacksonVersion = "2.8.4"
+    def retrofitVersion = "2.1.0"
+    def okHttpVersion = "3.4.1"
+    def fcmVersion = "11.8.0"
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    // Android Support
+    compile "com.android.support:support-v4:${supportLibVersion}"
+    compile "com.android.support:mediarouter-v7:27.0.2"
+    compile "com.android.support:appcompat-v7:${supportLibVersion}"
+    compile "com.android.support:cardview-v7:${supportLibVersion}"
+    compile "com.android.support:recyclerview-v7:${supportLibVersion}"
+    compile "com.android.support:design:${supportLibVersion}"
+    // GMS
+    compile "com.google.android.gms:play-services-analytics:${googleGmsVersion}"
+    //compile "com.google.android.gms:play-services:${googleGmsVersion}"
+    // Social Network
+    compile "${project.KAKAO_SDK_GROUP}:usermgmt:${project.KAKAO_SDK_VERSION}"
+    compile "${project.KAKAO_SDK_GROUP}:util:${project.KAKAO_SDK_VERSION}"
+    // fabric.io(crashlytics)
+    compile('com.crashlytics.sdk.android:crashlytics:2.8.0@aar') {
+        transitive = true;
+    }
+    // FCM
+    compile "com.google.firebase:firebase-core:${fcmVersion}"
+    compile "com.google.firebase:firebase-crash:${fcmVersion}"
+    compile "com.google.firebase:firebase-messaging:${fcmVersion}"
+    // Network
+    // joda time
+    // iCal4j
+    compile('org.mnode.ical4j:ical4j:2.0-beta1') {
+        exclude group: 'commons-logging', module: 'commons-logging'
+    }
+    // Apache Commons
+    compile "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}"
+    compile "com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}"
+    compile "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+    //ORM light
+    compile 'com.j256.ormlite:ormlite-android:4.48'
+    compile 'com.j256.ormlite:ormlite-core:4.48'
+    // Etc...
+    compile 'joda-time:joda-time:2.9.3'
+    compile 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
+    // Retrofit
+    compile("com.squareup.retrofit2:retrofit:${retrofitVersion}") {
+        exclude module: 'okhttp'
+    }
+    compile "com.squareup.retrofit2:converter-jackson:${retrofitVersion}"
+    compile "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}"
+    compile "com.squareup.okhttp3:okhttp:${okHttpVersion}"
+    compile "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}"
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'com.facebook.android:facebook-android-sdk:4.6.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'jp.wasabeef:glide-transformations:2.0.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'jp.wasabeef:picasso-transformations:2.1.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile 'com.github.2359media:EasyAndroidAnimations:0.8'
+    compile 'com.wdullaer:materialdatetimepicker:2.5.0'
+    compile 'com.github.clans:fab:1.6.4'
+
+    compile group: 'org.jsoup', name: 'jsoup', version: '1.10.2'
+
+    compile 'org.apmem.tools:layouts:1.10@aar'
+
+
+}
+
+apply plugin: 'com.google.gms.google-services'

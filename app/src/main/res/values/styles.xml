@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.Base">
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <style name="T1">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/transparent_dark50</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="T2">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/transparent_dark50</item>
+        <item name="android:typeface">sans</item>
+    </style>
+    <style name="T2_small">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/transparent_dark50</item>
+        <item name="android:textColorHint">@color/transparent_dark50</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="T3">
+        <item name="android:textSize">14.5dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/transparent_dark50</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="T4">
+        <item name="android:textSize">14.5dp</item>
+        <item name="android:textColor">@color/transparent_dark50</item>
+        <item name="android:textColorHint">@color/transparent_dark50</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="T5">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/transparent_dark50</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="T6">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/transparent_dark30</item>
+        <item name="android:textColorHint">@color/transparent_dark50</item>
+        <item name="android:typeface">sans</item>
+    </style>
+    <style name="T6_big">
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@color/transparent_dark20</item>
+        <item name="android:textColorHint">@color/transparent_dark50</item>
+        <item name="android:typeface">sans</item>
+    </style>
+    <style name="T6_small">
+        <item name="android:textSize">11.5dp</item>
+        <item name="android:textColor">@color/transparent_dark30</item>
+        <item name="android:textColorHint">@color/transparent_dark50</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="T7">
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">@color/transparent_dark30</item>
+        <item name="android:textColorHint">@color/transparent_dark50</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="T8">
+        <item name="android:textSize">9dp</item>
+        <item name="android:textColor">@color/transparent_dark30</item>
+        <item name="android:textColorHint">@color/transparent_dark50</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="T9">
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/transparent_dark50</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="AutoLockText">
+        <item name="android:textSize">25dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="PROFILE_NICKNAME">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- push popup theme -->
+    <style name="push_popup_theme" parent="android:Theme.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+
+
+
+
+
+
+    <!-- Custom Spinner -->
+    <style name="Spinner">
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateDrawable">@drawable/spinner</item>
+        <item name="android:indeterminateDuration">2000</item>
+        <item name="android:indeterminateOnly">true</item>
+    </style>
+
+    <style name="ListSpinner" parent="Spinner">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">64dp</item>
+    </style>
+
+    <style name="ListItem">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:background">@drawable/list_item_background</item>
+    </style>
+
+    <style name="TimerChronometer">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">75sp</item>
+        <item name="android:textColor">#464646</item>
+    </style>
+
+    <style name="NavMenuButton">
+        <item name="android:textColor">@color/nav_text_selector</item>
+        <item name="android:background">@drawable/nav_menu_button_background_selector</item>
+    </style>
+
+    <!-- custom style -->
+    <style name="DatePicker" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="MenuTitle">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="InputTitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="InputTitleCenter" parent="InputTitle">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="InputTitleRequire" parent="InputTitle">
+        <item name="android:textColor">@color/text_red</item>
+    </style>
+
+    <style name="EditTexthint">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_darkgray</item>
+    </style>
+
+    <style name="FormTitle">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="FormTitleGray">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/text_darkgray</item>
+    </style>
+
+    <style name="ListItemTitle">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="InputHint_LightTrans80_Bold">
+        <item name="android:textColor">@color/transparent_dark20</item>
+        <item name="android:textColorHint">@color/transparent_dark80</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="InputHint_LightTrans50_Bold">
+        <item name="android:textColor">@color/transparent_dark20</item>
+        <item name="android:textColorHint">@color/transparent_dark50</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="InputHint_LightTrans20_Bold">
+        <item name="android:textColor">@color/transparent_dark20</item>
+        <item name="android:textColorHint">@color/transparent_dark20</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="InputHint_DarkTrans80_Bold">
+        <item name="android:textColor">@color/transparent_dark20</item>
+        <item name="android:textColorHint">@color/transparent_dark80</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="InputHint_DarkTrans50_Bold">
+        <item name="android:textColor">@color/transparent_dark20</item>
+        <item name="android:textColorHint">@color/transparent_dark50</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="InputHint_DarkTrans20_Bold">
+        <item name="android:textColor">@color/transparent_dark20</item>
+        <item name="android:textColorHint">@color/transparent_dark20</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="InputHint_LightTrans80">
+        <item name="android:textColor">@color/transparent_dark20</item>
+        <item name="android:textColorHint">@color/transparent_dark80</item>
+    </style>
+    <style name="InputHint_LightTrans50">
+        <item name="android:textColor">@color/transparent_dark20</item>
+        <item name="android:textColorHint">@color/transparent_dark50</item>
+    </style>
+    <style name="InputHint_LightTrans20">
+        <item name="android:textColor">@color/transparent_dark20</item>
+        <item name="android:textColorHint">@color/transparent_dark20</item>
+    </style>
+    <style name="InputHint_DarkTrans80">
+        <item name="android:textColor">@color/transparent_dark20</item>
+        <item name="android:textColorHint">@color/transparent_dark80</item>
+    </style>
+    <style name="InputHint_DarkTrans50">
+        <item name="android:textColor">@color/transparent_dark20</item>
+        <item name="android:textColorHint">@color/transparent_dark50</item>
+    </style>
+    <style name="InputHint_DarkTrans20">
+        <item name="android:textColor">@color/transparent_dark20</item>
+        <item name="android:textColorHint">@color/transparent_dark20</item>
+    </style>
+
+    <style name="MenuLabelsStyle">
+        <!--item name="android:background">@drawable/talk_tooltip_me</item-->
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="NotificationPrimaryText" parent="@android:style/TextAppearance.StatusBar.EventContent.Title" />
+
+    <style name="NotificationSecondaryText" parent="@android:style/TextAppearance.Holo">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+</resources>

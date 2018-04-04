@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/market_menu_selector">
+
+    <Button
+        android:id="@+id/btn_title"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_weight="1"
+        android:textSize="15dp"
+        android:text="튜다톡"
+        android:textColor="@drawable/market_menu_text_selector"
+        android:background="@null"/>
+
+    <ImageView
+        android:id="@+id/iconNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="56dp"
+        android:paddingBottom="1dp"
+        android:src="@drawable/common_new"/>
+
+</RelativeLayout>

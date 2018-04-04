@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="7dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cardbox_round"
+        android:orientation="vertical"
+        android:descendantFocusability="blocksDescendants">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <ImageView
+                android:id="@+id/img_photo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/solution_default_man"
+                android:scaleType="fitXY"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@id/img_photo"
+                android:layout_weight="1"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:background="@drawable/job_market_oval_stroke_mint_r7"
+                        android:gravity="center"
+                        android:text="NEW"
+                        style="@style/T5"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/category_black"
+                        android:textSize="9dp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/icon_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:background="@drawable/job_market_oval_solid_mint_r7_recruit_type"
+                        android:gravity="center"
+                        android:text="영어"
+                        style="@style/T5"
+                        android:includeFontPadding="false"
+                        android:textSize="9dp"/>
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=""
+                        style="@style/T2"
+                        android:textColor="@color/text_black"
+                        android:ellipsize="end"
+                        android:maxLines="1"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/createdAt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawableLeft="@drawable/solution_list_date"
+                    android:drawablePadding="4dp"
+                    android:text=""
+                    style="@style/T6_small"
+                    android:textColor="@color/transparent_dark30"
+                    android:ellipsize="end"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btn_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/solution_list_menu"/>
+        </RelativeLayout>
+
+        <include layout="@layout/divider_black"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="11dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text=""
+            android:ellipsize="end"
+            android:maxLines="6"
+            style="@style/T2"
+            android:textColor="@color/text_black" />
+
+        <ImageView
+            android:id="@+id/img_question"
+            android:layout_width="match_parent"
+            android:layout_height="203dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:visibility="visible"/>
+
+        <include layout="@layout/divider_black_full"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:gravity="center"
+            android:stretchColumns="*"
+            android:background="@null">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/vcount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:drawableLeft="@drawable/solution_list_person"
+                    android:drawablePadding="4dp"
+                    android:text="조회수0회"
+                    style="@style/T6"
+                    android:textColor="@color/text_black" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tcount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:drawableLeft="@drawable/solution_list_talk"
+                        android:drawablePadding="4dp"
+                        android:text="대화0개"
+                        style="@style/T6"
+                        android:textColor="@color/text_black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_ncount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:gravity="bottom"
+                        android:text="새로운답변"
+                        style="@style/T6"
+                        android:textColor="@color/text_black" />
+
+                    <TextView
+                        android:id="@+id/ncount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="4.5dp"
+                        android:paddingRight="4.5dp"
+                        android:paddingBottom="0.5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/talk_button_r45"
+                        android:gravity="bottom"
+                        android:text="0"
+                        style="@style/T6"
+                        android:textColor="@color/text_oliveblack" />
+                </LinearLayout>
+
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</RelativeLayout>

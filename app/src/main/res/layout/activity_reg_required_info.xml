@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:paddingBottom="100dp"
+                android:onClick="closeKeyboard"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_notice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="39dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:text="튜다에서 사용할 아이디와 비밀번호를 입력해주세요."
+                    style="@style/T2"
+                    android:lineSpacingExtra="5dp"
+                    android:includeFontPadding="false"/>
+
+                <TextView
+                    android:id="@+id/email_check_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="5dp"
+                    android:includeFontPadding="false"
+                    android:textSize="10dp"
+                    style="@style/T7"
+                    android:textColor="@color/point_color_1" />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:gravity="center_vertical"
+                    android:hint="example@email.com"
+                    android:textSize="15dp"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/round_rect_r2_5"
+                    style="@style/T3"/>
+
+                <TextView
+                    android:id="@+id/txt_notice_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="22dp"
+                    android:gravity="center_vertical"
+                    android:text="아이디는 이메일 주소를 사용하며 서비스 사용을 위한 이메일 인증 및 비밀번호 찾기시 사용되니 반드시 사용중인 본인의 이메일 주소를 입력해주세요."
+                    android:lineSpacingExtra="5dp"
+                    android:includeFontPadding="false"
+                    style="@style/T6"
+                    android:textColor="@color/point_color_2"/>
+
+                <LinearLayout
+                    android:id="@+id/password_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:gravity="center_vertical"
+                        android:hint="비밀번호 (8자이상)"
+                        android:textSize="15dp"
+                        android:inputType="textVisiblePassword"
+                        android:maxLength="30"
+                        android:background="@drawable/round_rect_r2_5"
+                        style="@style/T3"/>
+
+                    <CheckBox
+                        android:id="@+id/pass_view"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-6.5dp"
+                        android:text="비밀번호 보기"
+                        style="@style/T3"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="11dp"
+                        android:gravity="center_vertical"
+                        android:text="영문,숫자,특수문자를 포함하여 8자리 이상"
+                        android:lineSpacingExtra="5dp"
+                        android:includeFontPadding="false"
+                        style="@style/T6"
+                        android:textColor="@color/point_color_2"/>
+
+                    <TextView
+                        android:id="@+id/phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="22dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:gravity="center_vertical"
+                        android:hint="휴대폰번호"
+                        android:textSize="15dp"
+                        android:inputType="phone"
+                        android:maxLength="30"
+                        android:background="@drawable/round_rect_r2_5"
+                        style="@style/T3"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="30dp" >
+                        <CheckBox
+                            android:id="@+id/check_terms"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-6.5dp"
+                            android:layout_marginRight="10dp"
+                            android:text="서비스 이용약관에 동의합니다."
+                            style="@style/T3"/>
+                        <Button
+                            android:id="@+id/read_terms"
+                            android:layout_toRightOf="@id/check_terms"
+                            android:padding="0dp"
+                            android:layout_width="55dp"
+                            android:layout_height="16dp"
+                            android:text="약관보기"
+                            android:textSize="11dp"
+                            android:textColor="@color/text_black"
+                            android:background="@drawable/job_market_oval_solid_mint_r7_recruit_type"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12.5dp"
+        android:layout_marginLeft="12.5dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="bottom|right" >
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/join_next_btn"
+            android:layout_alignParentRight="true"
+            android:background="@null" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_mail_auth"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:text="인증요청"
+        style="@style/T1"
+        android:textColor="@color/white"
+        android:background="@color/point_color_2"
+        android:visibility="gone"/>
+</FrameLayout>

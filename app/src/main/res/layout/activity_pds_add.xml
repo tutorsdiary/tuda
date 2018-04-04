@@ -1,0 +1,98 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/student_student_info_subject"/>
+
+                    <Spinner
+                        android:id="@+id/spin_subject"
+                        android:spinnerMode="dialog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+                <include layout="@layout/divider"/>
+
+                <EditText
+                    android:id="@+id/edit_pds_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:gravity="center_vertical"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/library_register_name"
+                    android:drawablePadding="11dp"
+                    android:hint="자료 이름을 입력해주세요."
+                    style="@style/T3"
+                    android:singleLine="true"/>
+
+                <include layout="@layout/divider"/>
+
+                <EditText
+                    android:id="@+id/edit_pds_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:gravity="center_vertical"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/library_register_url"
+                    android:drawablePadding="11dp"
+                    android:hint="사이트 URL을 입력해주세요."
+                    android:text="http://"
+                    style="@style/T3"
+                    android:singleLine="true"/>
+
+                <include layout="@layout/divider"/>
+
+                <Button
+                    android:id="@+id/btn_regist"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/formbutton_selector_square"
+                    android:text="등록완료"
+                    style="@style/T5"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

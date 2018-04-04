@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <style name="Theme.Base" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/main_background</item>
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/point_color_2</item>
+        <item name="colorControlActivated">@color/point_color_2</item>      <!-- Switch,Radio,CheckBox Active color-->
+        <item name="colorControlNormal">@color/point_color_2</item>     <!-- Switch,Radio,CheckBox Normal color-->
+        <item name="android:actionBarSize">@dimen/actionbar_height</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="@style/Theme.Base">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item-->
+    </style>
+
+</resources>

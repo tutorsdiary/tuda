@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="?android:colorControlHighlight" >
+    <item>
+        <selector xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:state_selected="true" android:drawable="@drawable/market_menu_select"/>
+            <item android:state_pressed="true" android:drawable="@drawable/market_menu_select"/>
+            <item android:drawable="@drawable/market_menu_unselect"/>
+        </selector>
+    </item>
+</ripple>

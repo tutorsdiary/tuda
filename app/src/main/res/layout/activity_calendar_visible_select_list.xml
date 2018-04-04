@@ -1,0 +1,57 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:title=""
+            android:minHeight="@dimen/actionbar_height"/>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ExpandableListView
+                    android:id="@+id/list_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:divider="@color/divider"
+                    android:childDivider="@color/divider"
+                    android:dividerHeight="0.5dp"
+                    android:listSelector="@drawable/list_selector"
+                    android:drawSelectorOnTop="true"
+                    android:scrollbars="none"
+                    android:groupIndicator="@null"/>
+
+                <LinearLayout
+                    android:id="@+id/error_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="35dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txt_error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/calendar_empty_date"
+                        android:drawablePadding="10dp"
+                        android:text="@string/calendar_visible_list_item_empty"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,163 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:paddingLeft="12.5dp"
+            android:paddingRight="12.5dp"
+            android:gravity="center_vertical"
+            android:background="#f8f8f8"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edit_school"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="40dp"
+                        android:background="@null"
+                        android:hint="학교명을 2글자이상 입력해주세요."
+                        android:imeOptions="actionSearch"
+                        style="@style/T2"
+                        android:singleLine="true"/>
+
+                    <ImageView
+                        android:id="@+id/btn_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/memo_student_delete"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/layout_edit"
+                    android:background="#c2c2c2"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="closeKeyboard"
+                android:layout_weight="1">
+
+                <ListView
+                    android:id="@+id/list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/divider"
+                    android:dividerHeight="0.5dp"
+                    android:drawSelectorOnTop="false"
+                    android:scrollbars="none"/>
+
+                <ScrollView
+                    android:id="@+id/error_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="70dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_error"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTop="@drawable/common_error"
+                                android:drawablePadding="10dp"
+                                android:text="@string/search_no_result"
+                                style="@style/T5"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="13dp"
+                                android:text="검색이 안 될 경우 직접 입력해주세요."
+                                android:textColor="@color/point_color_1"
+                                style="@style/T2"/>
+
+                            <LinearLayout
+                                android:id="@+id/layout_school"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="43dp"
+                                android:layout_marginLeft="12.5dp"
+                                android:layout_marginRight="12.5dp"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <EditText
+                                    android:id="@+id/edit_schoolname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="48dp"
+                                    android:paddingLeft="15dp"
+                                    android:paddingRight="15dp"
+                                    android:gravity="center_vertical"
+                                    android:hint="학교명을 직접 입력해주세요."
+                                    android:background="@drawable/round_rect_r2_5"
+                                    style="@style/T3"
+                                    android:singleLine="true"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <include layout="@layout/progress" />
+                    </RelativeLayout>
+                </ScrollView>
+
+                <Button
+                    android:id="@+id/btn_regist"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:text="입력완료"
+                    style="@style/T1"
+                    android:textColor="@color/white"
+                    android:background="@color/point_color_2"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+</FrameLayout>

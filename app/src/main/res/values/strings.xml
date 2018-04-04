@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="actionbar_title_event_repeat_setting">일정 반복설정</string>
+
+    <string name="facebook_app_id">928166907219380</string>
+    <string name="naver_client_id">hHKwWsckNyospH5StqVX</string>
+    <string name="naver_client_secret">e_MTKsbLaq</string>
+    <string name="naver_client_name">TutorsDiary</string>
+
+    <string name="app_name">TUDA</string>
+    <string name="app_name_full">TutorsDiary</string>
+    <string name="app_name_kor">튜다</string>
+
+    <string name="btn_app_update">업데이트</string>
+    <string name="btn_app_exit">종료하기</string>
+    <string name="btn_app_later">나중에 하기</string>
+    <string name="app_close">앱을 종료합니다.</string>
+    <string name="btn_ongoing">계속 진행하기</string>
+    <string name="btn_cancel">취소</string>
+    <string name="btn_yes">예</string>
+    <string name="btn_no">아니오</string>
+    <string name="btn_modify">수정하기</string>
+    <string name="msg_thankyou">선생님이 되면 다시 찾아주세요^^</string>
+    <string name="nickname_admin">튜다관리자</string>
+    <string name="talk_notice">공지</string>
+    <string name="copy_string">복사</string>
+    <string name="note_send">쪽지 발송</string>
+    <string name="bad_report">신고하기</string>
+    <string name="talk_secret">1:1톡 요청</string>
+    <string name="talk_room_exit">나가기</string>
+    <string name="talk_room_exit_1">질문 그만보기</string>
+
+    <string name="not_network">네트워크가 꺼져 있습니다.\n네트워크 설정후 다시 실행해주세요.</string>
+    <string name="action_message">메세지</string>
+    <string name="action_settings">설정</string>
+    <string name="action_close">닫기</string>
+    <string name="network_error">네트워크 오류</string>
+    <string name="action_mypage">내 정보 수정</string>
+    <string name="app_update">앱의 새버전이 출시됐습니다.\n업데이트 하시겠습니까?</string>
+    <string name="google_update">원활한 앱 사용을 위해 구글마켓을 최신버전으로 업데이트 해주세요.</string>
+    <string name="mail_client_choose">메일을 보낼 앱을 선택하세요.</string>
+    <string name="default_error">일시적인 오류입니다.\n잠시 후에 다시 시도해 주세요.</string>
+    <string name="google_play_error">튜다톡을 정상적으로 사용하기 위해, 구글마켓을 최신버전으로 업데이트 해주세요.</string>
+    <string name="pushkey_error">디바이스를 등록중에 있습니다.\n앱을 종료 후 다시 실행해주세요.</string>
+    <string name="request_sending">기능 요청중 입니다...</string>
+    <string name="find_password_start">비밀번호찾기를 시작합니다.</string>
+    <string name="mail_success1">입력한 주소로 메일이 발송됐습니다.\n메일을 통해 임시발급된 비밀번호를 확인해 주세요.</string>
+    <string name="mail_success2">입력한 휴대폰번호로 SMS가 발송됐습니다.\nSMS를 통해 임시발급된 비밀번호를 확인해 주세요.</string>
+    <string name="mail_error1">메일 발송 오류입니다.\n잠시 후에 다시 시도해 주세요.</string>
+    <string name="mail_error2">SMS 발송 오류입니다.\n잠시 후에 다시 시도해 주세요.</string>
+    <string name="password_update_fail">비밀번호 변경에 실패했습니다.\n잠시 후에 다시 시도해 주세요.</string>
+    <string name="data_incorrect">입력한 정보가 일치하지 않습니다.\n다시 입력해 주세요.</string>
+    <string name="data_fail">일시적인 오류입니다.\n잠시 후에 다시 시도해 주세요.</string>
+    <string name="signup_fail">회원가입에 오류가 발생했습니다.\n잠시 후에 다시 시도해 주세요.</string>
+    <string name="network_fail_msg1">어머나! 죄송합니다 ㅠ.ㅠ</string>
+    <string name="network_fail_msg2">네트워크 오류가 발생했습니다.\n다시 한번 시도해 보시겠어요?</string>
+    <string name="network_fail_btn1">네.</string>
+    <string name="network_fail_btn2">종료할께요.</string>
+    <string name="network_fail">네트워크 오류입니다.\n잠시 후에 다시 시도해 주세요.</string>
+    <string name="notice_fail">종료된 공지입니다.</string>
+    <string name="token_fail">로그인에 실패했습니다.\n다시 시도해 주세요.</string>
+    <string name="nomember_fail">가입정보가 없습니다.\n이메일 정보를 다시한번 확인해주세요.</string>
+    <string name="duplicatemember_fail">가입되어 있는 계정입니다.\n로그인 합니다.</string>
+    <string name="ban_words_fail">사용할 수 없는 단어가 포함되어 있습니다.</string>
+    <string name="request_finish">요청이 완료 됐습니다.</string>
+    <string name="request_form_input">내용을 입력해 주세요.</string>
+    <string name="login_fail_sns">로그인을 할 수 없습니다.이메일로 로그인후 환경설정-SNS 로그인연동을 해주세요.</string>
+    <string name="duplicatemember_sns">로그인을 진행합니다.</string>
+    <string name="config_sns_login">%1$s(으)로 로그인을 할 수 있습니다.</string>
+    <string name="config_sns_logout">연동이 해제되었습니다.\n이제는 %1$s(으)로 로그인을 할 수 없습니다.</string>
+    <string name="config_sns_duplicate">SNS연동은 중복해서 사용할 수 없습니다.</string>
+    <string name="config_sns_connect_fail">연동할 수 없습니다.</string>
+    <string name="noti_app_exit">종료하려면 \'종료하기\' 버튼을 눌러주세요.</string>
+    <string name="pds_moveToMy">마이자료실에 즐겨찾기 되었습니다.</string>
+    <string name="pds_moveToShare">공유자료실에 등록 되었습니다.</string>
+    <string name="pds_duplicate_my">마이자료실에 동일한 자료가 즐겨찾기되어 있습니다.</string>
+    <string name="pds_duplicate_share">공유자료실에 동일한 자료가 등록되어 있습니다.</string>
+    <string name="withdraw_msg1">정말 탈퇴하실 건가요?</string>
+    <string name="withdraw_msg2">아래 튜다 탈퇴 절차를 작성해주시면 &lt;font color=\'#f64747\'&gt;학생정보, 수업평가/수업료/상담내역/메모 등 서비스 이용 중 입력한 각종 정보도 모두 삭제&lt;/font&gt;됩니다.</string>
+    <string name="withdraw_msg2_partner">아래 튜다 탈퇴 절차를 작성해주시면 &lt;font color=\'#f64747\'&gt;서비스 내 각종 활동내역, 등의 정보도 모두 삭제&lt;/font&gt;됩니다.</string>
+    <string name="withdraw_msg3">30일내 재가입은 하실 수 없습니다.\n개인정보보호를 위해 탈퇴후 삭제된 데이터는 기존 데이터로 복구할 수 없습니다.\n타인과 공유된 데이터(예:튜다톡, 잡마켓, 등)의 경우는 보존될 수 있습니다. 보존을 원치 않을경우 직접 삭제해 주시기 바랍니다.\n안내에 대한 동의절차는 탈퇴버튼을 누르는 것으로 갈음합니다.</string>
+    <string name="withdraw_msg7">정말 탈퇴하실 건가요?</string>
+    <string name="withdraw_msg8">로그인 비밀번호를 입력해주세요.</string>
+    <string name="withdraw_fail">탈퇴 처리가 되지 않았습니다.\n비밀번호를 확인해 주세요.</string>
+    <string name="withdraw_success">탈퇴 됐습니다.\n그동안 이용해주셔서 감사합니다.</string>
+    <string name="too_much_address_search_result">검색결과가 너무 많습니다.\n검색 종류와 검색어를 조합해서 정확도를 올려주시기 바랍니다.\n(예:영동대로 513, 삼성동 159, 산본천로 119-9)</string>
+    <string name="funcrequest_no_answer">답변을 기다리는중 입니다.</string>
+    <string name="talk_lastread">여기까지 읽었습니다.</string>
+    <string name="image_upload_fail">이미지 업로드에 실패했습니다.\n잠시 후에 다시 시도해 주세요.</string>
+    <string name="image_upload_noAvail">본 기기는 이미지 업로드 기능을 지원하지 않습니다.</string>
+    <string name="web_loading_fail">해당 웹페이지는 더이상 유효하지 않습니다.</string>
+    <string name="member_info_fail">일치하는 회원 정보가 없습니다.\n정확히 입력 후 다시 시도해 주세요.</string>
+    <string name="app_close_message">뒤로가기를 두번 누르면 앱이 종료됩니다.</string>
+    <string name="mypage_info_change">내 정보를 변경할까요?</string>
+    <string name="mypage_passwd_change">비밀번호를 변경할까요?</string>
+    <string name="mypage_auto_login">자동로그인 할까요?</string>
+    <string name="birthday_message">생년월일은 언제인가요?</string>
+    <string name="repeat_day_interval_txt">일마다 반복</string>
+    <string name="repeat_week_interval_txt">주마다 반복</string>
+    <string name="repeat_month_interval_txt">개월마다 반복</string>
+    <string name="repeat_year_interval_txt">년마다 반복 (M월 d일)</string>
+    <string name="cs_notice_contents1">안녕하세요. 튜다 고객센터입니다.\n기능개선/버그신고 등 불편한 사항을 기재해 주시면 최대한 빠른 시간 내로 답변 드릴 수 있도록 노력하겠습니다.</string>
+    <string name="cs_notice_contents2">고객센터 운영 시간 : 오전 10시 ~ 오후 7시까지</string>
+    <string name="student_lesson_open">과외를 하고 있습니다.</string>
+    <string name="student_lesson_close">더 이상 과외를 하지 않습니다.</string>
+    <string name="charge_chargeday">수업료 납부일을 입력하세요.</string>
+    <string name="talk_helptag">#헬프</string>
+    <string name="talk_helptag_toast">튜다 관리자에게 내용을 전달하였습니다.</string>
+    <string name="mobile_input_message">만약 학생 휴대폰번호가 없다면 부모님 휴대폰번호를 입력해주세요.</string>
+    <string name="talk_input_message">메세지를 입력해주세요.</string>
+    <string name="talkroom_exit_message">톡에서 나가시겠습니까?\n\n톡에서 나가면 알림이 오지 않습니다.</string>
+    <string name="talkroom_exit_message_1">질문을 그만 보시겠습니까?\n\n알림이 오지 않게됩니다.</string>
+    <string name="talkroom_delete_msg_byOwner">개설자에 의해 삭제된 방입니다.</string>
+    <string name="talkroom_delete_msg_byAdmin">운영자에 의해 삭제된 방입니다.</string>
+    <string name="webview_ssl_error1">이 사이트의 보안 인증서는 신뢰할 수 없습니다.\n\n계속 진행하시겠습니까?</string>
+    <string name="webview_ssl_error2">보안 인증서에 오류가 있습니다.\n\n계속 진행하시겠습니까?</string>
+    <string name="regist_warning1">튜다는 선생님들을 위한 공간입니다.\n\n선생님이 아닐 경우 이용에 제한이 있을 수 있습니다.</string>
+    <string name="regist_warning1_company">안녕하세요. 튜터스다이어리입니다.\n\n기업회원의 경우 정확한 업체정보(사업자명/회사번호/본인이름/전화번호/사업자등록번호/사업소개 등)를 입력하셔야 정상적인 서비스이용이 가능하며, \n부정확한 정보를 입력할 경우 사전예고 없이 서비스이용을 제한 할 수 있습니다.</string>
+    <string name="regist_warning2">입력하신 정보는 추후 서비스 사용을 위한 이메일 인증 및 비밀번호 찾기 시 사용되오니 정확한 정보를 입력해 주셔야 합니다.\n\n가입하시겠습니까?</string>
+    <string name="email_modify_warning">아이디를 변경할 경우 입력한 이메일 주소로 아이디가 변경저장되며, 해당 이메일로 인증을 다시 받아야 합니다.\n\n변경하시겠습니까?</string>
+    <string name="email_auth_warning">인증요청시 입력한 이메일로 인증메일이 발송되며, 해당 이메일 주소로 아이디가 변경됩니다.\n\n인증요청을 하시겠습니까?</string>
+    <string name="main_notice_title">앱 리뷰를 남겨주세요</string>
+    <string name="main_notice_contents1">리뷰에 목마른 튜다입니다. :)\n구글플레이에 리뷰를 남겨주시면 과외선생님들을 위한 앱 기능 개선에 더욱 도움이 된답니다.♡</string>
+    <string name="main_notice_btn_ok">GooglePlay 리뷰 쓰기</string>
+    <string name="talk_nickgender_notice">닉네임과 성별, 지역 수정은 \'마이페이지-내정보변경\'에서 할 수 있습니다.</string>
+    <string name="talk_nickgender_alert">튜다톡을 이용하려면 닉네임과 성별, 지역(선택)을 입력해야 합니다.\n\n닉네임과 성별, 지역(선택)을 입력하시겠습니까?</string>
+    <string name="gossip_add">글이 등록됐습니다.</string>
+    <string name="talk_notice_msg1">1. 음담패설, 욕설 등 상대방이 불쾌할 수 있는 단어는 삼가해 주세요.&lt;br&gt;2. 광고성이 짙은 톡은 사전 통보없이 삭제될 수 있습니다.&lt;br&gt;3. \'&lt;font color=\'#f64747\'&gt;&lt;b&gt;#헬프&lt;/b&gt;&lt;/font&gt; 궁금한 내용\'를 남겨주시면 위 내용에 대한 신고가 접수됩니다.&lt;br&gt;※ 이용 문의 사항은 헬프데스크 톡을 이용해 주세요!&lt;br&gt;(문의 가능 시간: 오전 10시 ~ 오후 7시)</string>
+    <string name="talk_notice_msg2">평일기준 오전 10시~오후 7시까지만 어플 기능 및 사용에 대해서 답변할 수 있으니 양해 바랍니다.</string>
+    <string name="talk_alert_msg1">메시지는 10,000자 이내로 입력해주세요.</string>
+    <string name="phoneNumber_notice_title">휴대폰 번호를 입력해주세요</string>
+    <string name="phoneNumber_notice_contents1">비밀번호찾기시 본인인증을 위해 휴대폰번호가 필요합니다.\n\n마이페이지-내정보변경에서 휴대폰번호를 입력해주세요.</string>
+    <string name="identification_notice_contents1">본 서비스는 선생님들만 이용할 수 있으며, 선생님임을 인증하기 위해 본인확인을 해야 합니다.</string>
+    <string name="identification_notice_contents2">본 서비스는 선생님들만 이용할 수 있으며, 내 정보의 업데이트가 필요합니다. 또한 선생님임을 인증하기 위해 본인확인을 해야 합니다.</string>
+    <string name="identification_notice_contents3">TUDA의 운영 정책 변경에 따라  튜다톡을 사용하기 위해서 반드시 아래와 같이 본인의 정보를 변경해 주세요.&lt;br&gt;&lt;br&gt;&lt;font color=\'#f64747\'&gt;1. 입력 및 수정 방법&lt;br&gt;화면 왼쪽 상단의 삼선메뉴 - 상단 프로필이미지 클릭 - 하단 프로필수정 클릭 - 프로필 관리&lt;br&gt;&lt;br&gt;2. 필수 입력 정보&lt;br&gt;아이디, 기본정보, 연락처, 수업정보&lt;/font&gt;</string>
+    <string name="identification_notice_contents4">TUDA의 운영 정책에 따라 잡마켓을 사용하기 위해서 반드시 아래와 같이 본인의 정보를 변경해 주세요.&lt;br&gt;&lt;br&gt;&lt;font color=\'#f64747\'&gt;1. 입력 및 수정 방법&lt;br&gt;화면 왼쪽 상단의 삼선메뉴 - 상단 프로필이미지 클릭 - 하단 프로필수정 클릭 - 프로필 관리&lt;br&gt;&lt;br&gt;2. 필수 입력 정보&lt;br&gt;아이디, 기본정보, 연락처, 수업정보&lt;/font&gt;</string>
+    <string name="jobmarket_add_contents1">구인 / 구직을 선택하세요.</string>
+    <string name="note_msg1">쪽지의 유효기간은 30일 입니다.\n수신자가 쪽지를 수신할 수 없는 버전의 튜다앱을 사용할 경우\n쪽지 발송이 되지 않습니다.</string>
+    <string name="note_receiver_error">자신에게 쪽지를 발송할수는 없습니다.</string>
+    <string name="talk_list_notice">글 작성시 음담패설, 욕설 등 상대방이 불쾌할 수 있는 단어는 삼가해 주세요.</string>
+    <string name="study_room_notice">쌤풀은 쌤들끼리 서로 질문하고 풀어보며 문제에 대해 이야기하는 공간입니다.\n\n부담없이 이야기해 보아요.\n쌤들간의 에티켓은 필수~★</string>
+    <string name="no_tel">등록된 연락처가 없습니다.</string>
+    <string name="calendar_notice_contents1">수업일정 또는 일반일정을 등록해보세요!</string>
+    <string name="event_list_add_event_msg"><u>일정을 등록해주세요!</u></string>
+    <string name="findpasswd_msg1">1. 튜다앱 이용시\n비밀번호찾기 신청 > 입력한 이메일(또는 휴대폰번호)로 초기화 된 비밀번호 발송 (이메일의 경우 이메일 미 도착시 스팸함 확인)</string>
+    <string name="findpasswd_msg1_1">1. 튜다앱 이용시\n비밀번호찾기 신청 > 입력한 이메일로 초기화 된 비밀번호 발송 (이메일 미 도착시 스팸함 확인)</string>
+    <string name="findpasswd_msg2">2. 튜다 고객센터 이용시\n1번 방법으로 해결되지 않을 경우 아래 정보 기재후 튜다 고객센터로 신청\n기재내용 : 가입시 입력한 이메일(또는 휴대폰번호, 이후 연락처), 닉네임, 생일\n(가입시 입력한 연락처와 다른 연락처로 초기화 된 비밀번호를 받고자 할 경우, 별도 연락처 기재)</string>
+    <string name="findpasswd_msg2_1">2. 튜다 고객센터 이용시\n1번 방법으로 해결되지 않을 경우 아래 정보 기재후 튜다 고객센터로 신청\n기재내용 : 가입시 입력한 이메일, 닉네임, 생일\n(가입시 입력한 이메일과 다른 이메일로 초기화 된 비밀번호를 받고자 할 경우, 별도 이메일 기재)</string>
+    <string name="findpasswd_msg3">고객센터 : tutorsdiary@gmail.com</string>
+    <string name="findpasswd_hint1">가입시 입력했던 이메일을 입력해주세요! :)</string>
+    <string name="findpasswd_hint2">가입시 입력했던 휴대폰번호를 입력해주세요! :)</string>
+    <string name="findpasswd_hint3">가입시 입력했던 닉네임을 입력해주세요! :)</string>
+    <string name="mail_auth_indicator"><u>인증필요</u></string>
+    <string name="config_readprocess">모든 튜다톡, 알림이 읽음처리 되었습니다.</string>
+
+    <string name="default_list_item_empty"><u>등록된 내역이 없습니다.</u></string>
+    <string name="student_list_item_empty"><u>학생을 등록해 주세요!</u></string>
+    <string name="talkroom_list_item_empty"><u>새로운 톡을 만들어 주세요!</u></string>
+    <string name="mytalkroom_list_item_empty"><u>참여한 방이 없습니다.<br/>대화에 참여해 보세요!</u></string>
+    <string name="charge_list_item_empty"><u>수업료를 등록해 주세요!</u></string>
+    <string name="sms_list_item_empty"><u>등록된 학생이 없습니다.</u></string>
+    <string name="market1_list_item_empty"><u>등록된 구인.구직이 없습니다.</u></string>
+    <string name="market2_list_item_empty"><u>등록된 과외업체가 없습니다.</u></string>
+    <string name="notice_list_item_empty"><u>등록된 공지사항이 없습니다.</u></string>
+    <string name="memo_list_item_empty"><u>메모를 등록해 주세요!</u></string>
+    <string name="simsim_list_item_empty"><u>등록된 교육정보가 없습니다.</u></string>
+    <string name="grade_list_item_empty"><u>등록된 성적이 없습니다.</u></string>
+    <string name="lessonhistory_list_item_empty"><u>등록된 수업내역이 없습니다.</u></string>
+    <string name="talk_list_item_empty"><u>등록된 대화가 없습니다.</u></string>
+    <string name="note_list_item_empty"><u>쪽지가 없습니다.</u></string>
+    <string name="calendar_visible_list_item_empty"><u>등록된 캘린더가 없습니다.</u></string>
+    <string name="conversation_list_item_empty"><u>상담일지를 등록해 주세요!</u></string>
+    <string name="alarm_list_item_empty"><u>수신된 알림이 없습니다.</u></string>
+
+    <string name="list_item_empty">등록된 학생이 없습니다.</string>
+    <string name="list_item_empty2">등록된 내역이 없습니다.</string>
+    <string name="list_item_empty3">등록된 자료가 없습니다.</string>
+    <string name="list_item_empty4">개설된 방이 없습니다.</string>
+    <string name="list_item_empty4_1">질문이 없습니다.</string>
+    <string name="list_item_empty5">등록된 대화가 없습니다.</string>
+    <string name="list_item_empty6">검색된 내역이 없습니다.</string>
+    <string name="list_item_empty7">등록된 일정이 없습니다.</string>
+    <string name="list_item_empty8">등록된 글이 없습니다.</string>
+    <string name="list_item_empty9">참여한 방이 없습니다.</string>
+    <string name="list_item_empty9_1">보고있는 질문이 없습니다.</string>
+    <string name="list_item_empty10">등록된 댓글이 없습니다.</string>
+    <string name="list_item_empty11">&lt;u&gt;등록된 내역이 없습니다.&lt;br/&gt;&lt;font color=\'#f64747\'&gt;&lt;strong&gt;[수업일정 상세보기] > [학생이름 우측 삼선메뉴]&lt;/strong&gt;&lt;/font&gt;를 눌러서 학생별 평가를 등록하거나, 우측 상단 \'+\' 버튼을 눌러서 등록해주세요.&lt;/u&gt;</string>
+    <string name="list_item_empty12">검색된 지역이 없거나,\n지역명 형식이 맞지 않습니다.\n\n지역명을 형식에 맞게 입력해주세요.\n(\'구\', \'동\' 글자 제외, 예:잠실2동 -> 잠실)</string>
+    <string name="list_item_empty13">쪽지가 없습니다.</string>
+    <string name="list_item_empty14">등록된 메모가 없습니다.</string>
+
+    <string name="year">년</string>
+    <string name="month">월</string>
+    <string name="date">일</string>
+    <string name="repeat_month_day_interval">매월 %1$d 일마다반복</string>
+    <string name="repeat_month_week_interval">매월 %1$d번째 %2$s 마다 반복</string>
+    <string name="date_yyyymmddww">yyyy년 M월 d일 (E)</string>
+    <string name="am">오전</string>
+    <string name="pm">오후</string>
+    <string name="time_aahhii">a h:mm</string>
+    <string name="repeat_end_date_yyyymmddww">yyyy년 M월 d일 (E) 까지반복</string>
+    <string name="sunday">일</string>
+    <string name="monday">월</string>
+    <string name="tuesday">화</string>
+    <string name="wednsday">수</string>
+    <string name="thursday">목</string>
+    <string name="friday">금</string>
+    <string name="saturday">토</string>
+    <string name="accept">확인</string>
+    <string name="cancel">취소</string>
+    <string name="dialog_message_withsave_confirm">변경된 내용을 저장 하시겠습니까?</string>
+    <string name="dialog_message_withoutsave_confirm">변경된 내용을 저장하지 않고 돌아가시겠습니까?</string>
+    <string name="member_type_teacher"><u>나는 선생님 입니다.</u></string>
+    <string name="member_type_student"><u>나는 학생 또는 학부모 입니다.</u></string>
+    <string name="member_type_partner"><u>나는 기업 입니다.</u></string>
+    <string name="mobile_type_select_text_1">튜터스다이어리는 수업관리를 할 수 있는 유틸리티 기능과 선생님 실시간 커뮤니티 기능을 합쳐 U-Community 모바일 교육 토탈 서비스를 제공합니다.</string>
+    <string name="mobile_type_select_text_2">가입하시겠습니까?</string>
+    <!--string name="mobile_certi_info_text">휴대폰 인증은 본인 확인 및 정보등록을 위해 사용되며 동의없이 타인에게 공개되지 않으니 안심하세요. :)</string-->
+    <string name="mobile_certi_info_text">휴대폰 번호는 본인 확인 및 정보등록을 위해 사용되며 동의없이 타인에게 공개되지 않으니 안심하세요. :)</string>
+    <string name="mobile_certi_number_text">입력하신 휴대폰번호로 인증번호를 전송했습니다. 아래의 입력란에 인증번호를 입력해주세요. :)</string>
+    <string name="retry_send_certi_code"><u>인증번호 재전송</u></string>
+    <string name="abort_input"><u>다음에 입력할래요.</u></string>
+    <string name="input_cancel"><u>입력취소</u></string>
+    <string name="search_no_result"><u>검색된 내역이 없습니다.</u></string>
+
+    <string name="today">"오늘"</string>
+    <string name="tomorrow">내일</string>
+
+    <string-array name="calendar_top_menu">
+        <item>표시할캘린더</item>
+        <item>날씨지역설정</item>
+    </string-array>
+
+    <string-array name="schedule_type">
+        <item>수업일정등록</item>
+        <item>일반일정등록</item>
+    </string-array>
+
+    <string-array name="attendee_select_menu">
+        <item>상세정보보기</item>
+        <item>수업평가하기</item>
+        <item>수업료등록</item>
+        <item>상담일지등록</item>
+        <item>평가이력보기</item>
+        <item>수업료이력보기</item>
+        <item>상담이력보기</item>
+    </string-array>
+
+    <!-- 잡마켓-->
+    <string-array name="academy_type">
+        <item>학원</item>
+        <item>과외업체</item>
+        <item>개인</item>
+    </string-array>
+
+    <string-array name="worker_type">
+        <item>학원</item>
+        <item>과외</item>
+    </string-array>
+
+    <string-array name="gender_type">
+        <item>무관</item>
+        <item>남자</item>
+        <item>여자</item>
+    </string-array>
+
+    <string-array name="gender_type3">
+        <item>성별무관</item>
+        <item>남자</item>
+        <item>여자</item>
+    </string-array>
+
+    <string-array name="gender_type2">
+        <item>남자</item>
+        <item>여자</item>
+    </string-array>
+
+    <string-array name="career_recruit_type">
+        <item>무관</item>
+        <item>신입</item>
+        <item>경력1년 이상</item>
+        <item>경력2년 이상</item>
+        <item>경력3년 이상</item>
+        <item>경력4년 이상</item>
+        <item>경력5년 이상</item>
+        <item>경력6년 이상</item>
+        <item>경력7년 이상</item>
+        <item>경력8년 이상</item>
+        <item>경력9년 이상</item>
+        <item>경력10년 이상</item>
+        <item>경력15년 이상</item>
+        <item>경력20년 이상</item>
+    </string-array>
+
+    <string-array name="career_worker_type">
+        <item>신입</item>
+        <item>경력1년</item>
+        <item>경력2년</item>
+        <item>경력3년</item>
+        <item>경력4년</item>
+        <item>경력5년</item>
+        <item>경력6년</item>
+        <item>경력7년</item>
+        <item>경력8년</item>
+        <item>경력9년</item>
+        <item>경력10년 이상</item>
+        <item>경력15년 이상</item>
+        <item>경력20년 이상</item>
+    </string-array>
+
+    <string-array name="education_recruit_type">
+        <item>무관</item>
+        <item>고등학교졸업 이상</item>
+        <item>대학교(2/3년)재학 이상</item>
+        <item>대학교(2/3년)졸업 이상</item>
+        <item>대학교(4년)재학 이상</item>
+        <item>대학교(4년)졸업 이상</item>
+        <item>대학원재학 이상</item>
+        <item>대학원졸업 이상</item>
+        <item>해외유학 이상</item>
+    </string-array>
+
+    <string-array name="education_worker_type">
+        <item>고등학교졸업</item>
+        <item>대학교(2/3년)재학</item>
+        <item>대학교(2/3년)졸업</item>
+        <item>대학교(4년)재학</item>
+        <item>대학교(4년)졸업</item>
+        <item>대학원재학</item>
+        <item>대학원졸업</item>
+        <item>해외유학</item>
+    </string-array>
+
+    <string-array name="recruit_subejct_arrays">
+        <item>영어</item>
+        <item>수학</item>
+        <item>과학</item>
+        <item>국어</item>
+        <item>논술</item>
+        <item>도덕</item>
+        <item>물리</item>
+        <item>미술</item>
+        <item>사회</item>
+        <item>생물</item>
+        <item>예체능</item>
+        <item>음악</item>
+        <item>중국어</item>
+        <item>지리</item>
+        <item>지학</item>
+        <item>직업탐구</item>
+        <item>체육</item>
+        <item>컴퓨터</item>
+        <item>한국사</item>
+        <item>화학</item>
+        <item>전과목</item>
+    </string-array>
+
+    <string-array name="student_grade_arrays">
+        <item>전체</item>
+        <item>유치부</item>
+        <item>유/초</item>
+        <item>유/초/중/고</item>
+        <item>초</item>
+        <item>초/중</item>
+        <item>초/중/고</item>
+        <item>중</item>
+        <item>중/고</item>
+        <item>고</item>
+        <item>고/재수생</item>
+        <item>재수생</item>
+        <item>편입</item>
+        <item>대학/일반</item>
+    </string-array>
+
+    <string-array name="student_grade_arrays2">
+        <item>유치부</item>
+        <item>초등학교</item>
+        <item>중학교</item>
+        <item>고등학교</item>
+        <item>재수생</item>
+        <item>편입</item>
+        <item>대학/일반</item>
+    </string-array>
+
+    <string-array name="division_arrays">
+        <item>선택안함</item>
+        <item>단기</item>
+        <item>파트</item>
+        <item>전임</item>
+        <item>단기/파트</item>
+        <item>단기/파트/전임</item>
+    </string-array>
+
+    <string-array name="job_type_arrays">
+        <item>과외교사</item>
+        <item>입시/보습/속셈</item>
+        <item>외국어/어학원</item>
+        <item>컴퓨터/예체능</item>
+        <item>유치원/어린이집</item>
+        <item>학습지/방문교사</item>
+        <item>자기주도학습/학습코칭</item>
+        <item>기간제교사</item>
+        <item>방과후교사</item>
+        <item>일반사무</item>
+    </string-array>
+
+    <string-array name="lesson_cycle_arrays">
+        <item>주1회</item>
+        <item>주2회</item>
+        <item>주3회</item>
+        <item>주4회</item>
+        <item>주5회</item>
+        <item>주6회</item>
+        <item>주7회</item>
+        <item>협의후결정</item>
+    </string-array>
+
+    <string-array name="lesson_time_arrays">
+        <item>10분</item>
+        <item>20분</item>
+        <item>30분</item>
+        <item>40분</item>
+        <item>50분</item>
+        <item>60분</item>
+        <item>70분</item>
+        <item>80분</item>
+        <item>90분</item>
+        <item>100분</item>
+        <item>110분</item>
+        <item>120분</item>
+        <item>130분</item>
+        <item>140분</item>
+        <item>150분</item>
+        <item>160분</item>
+        <item>170분</item>
+        <item>180분</item>
+        <item>협의후결정</item>
+    </string-array>
+
+    <string-array name="personnel_arrays">
+        <item>0명</item>
+        <item>00명</item>
+        <item>1명</item>
+        <item>2명</item>
+        <item>3명</item>
+        <item>4명</item>
+        <item>5명</item>
+        <item>6명</item>
+        <item>7명</item>
+        <item>8명</item>
+        <item>9명</item>
+        <item>10명</item>
+    </string-array>
+
+
+    <string-array name="recruitSector_arrays">
+        <item>영어</item>
+        <item>수학</item>
+        <item>과학</item>
+        <item>국어</item>
+        <item>논술</item>
+        <item>도덕</item>
+        <item>물리</item>
+        <item>미술</item>
+        <item>사회</item>
+        <item>생물</item>
+        <item>예체능</item>
+        <item>음악</item>
+        <item>정교사</item>
+        <item>중국어</item>
+        <item>지리</item>
+        <item>지학</item>
+        <item>직업탐구</item>
+        <item>체육</item>
+        <item>컴퓨터</item>
+        <item>한국사</item>
+        <item>화학</item>
+        <item>전과목</item>
+        <item>독서/속독</item>
+        <item>자기주도학습</item>
+        <item>학습지교사</item>
+        <item>특기교사</item>
+        <item>파견교사</item>
+        <item>학습코칭</item>
+        <item>방문교사</item>
+        <item>보육교사</item>
+        <item>보조교사</item>
+        <item>대체교사</item>
+        <item>기타</item>
+    </string-array>
+
+    <!-- student list -->
+    <string-array name="subject_arrays">
+        <item>과목선택</item>
+        <item>국어</item>
+        <item>영어</item>
+        <item>수학</item>
+        <item>과학탐구</item>
+        <item>사회탐구</item>
+        <item>음악</item>
+        <item>미술</item>
+        <item>체육</item>
+        <item>직접입력</item>
+    </string-array>
+
+    <string-array name="subject_arrays2">
+        <item>선택해주세요.</item>
+        <item>국어</item>
+        <item>영어</item>
+        <item>수학</item>
+        <item>과학탐구</item>
+        <item>사회탐구</item>
+        <item>음악</item>
+        <item>미술</item>
+        <item>체육</item>
+        <item>그 외 과목</item>
+    </string-array>
+
+    <string-array name="studycount_arrays">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="student_sort_arrays">
+        <item>전체</item>
+        <item>과외중</item>
+    </string-array>
+    <string-array name="sms_sort_arrays">
+        <item>등록일순</item>
+        <item>이름순</item>
+    </string-array>
+    <string-array name="inner_grade_arrays">
+        <item>학교등급</item>
+        <item>1등급</item>
+        <item>2등급</item>
+        <item>3등급</item>
+        <item>4등급</item>
+        <item>5등급</item>
+        <item>6등급</item>
+        <item>7등급</item>
+        <item>8등급</item>
+        <item>9등급</item>
+    </string-array>
+    <string-array name="outer_grade_arrays">
+        <item>전국등급</item>
+        <item>1등급</item>
+        <item>2등급</item>
+        <item>3등급</item>
+        <item>4등급</item>
+        <item>5등급</item>
+        <item>6등급</item>
+        <item>7등급</item>
+        <item>8등급</item>
+        <item>9등급</item>
+    </string-array>
+    <string-array name="classtype_arrays">
+        <item>문과</item>
+        <item>이과</item>
+    </string-array>
+
+    <!-- grade list -->
+    <string-array name="grade_schooltype_arrays">
+        <item>초등학교</item>
+        <item>중학교</item>
+        <item>고등학교</item>
+    </string-array>
+    <string-array name="grade_schooltype_arrays2">
+        <item>초등</item>
+        <item>중등</item>
+        <item>고등</item>
+    </string-array>
+    <string-array name="grade_year_arrays">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="grade_year_arrays_short">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="grade_term_arrays">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="grade_examtype_arrays">
+        <item>중간</item>
+        <item>기말</item>
+        <item>모의</item>
+        <item>직접입력</item>
+    </string-array>
+
+    <!-- charge list -->
+    <string-array name="charge_paid_arrays">
+        <item>완납</item>
+        <item>미납</item>
+    </string-array>
+
+    <!-- lesson -->
+    <string-array name="lesson_repeat_type">
+        <item>반복안함</item>
+        <item>매주(횟수지정)</item>
+        <item>매주(종료일지정)</item>
+        <item>격주(횟수지정)</item>
+        <item>격주(종료일지정)</item>
+    </string-array>
+
+    <!-- alarm time -->
+    <string-array name="alarm_time_arrays">
+        <item>30분전</item>
+        <item>1시간전</item>
+        <item>2시간전</item>
+        <item>3시간전</item>
+    </string-array>
+
+    <!-- 탈퇴 사유 -->
+    <string-array name="withdraw_reason">
+        <item>구인구직 등록이 어려워서</item>
+        <item>학생출결 기능이 없어서</item>
+        <item>선생님 또는 교육관계자가 아니라서</item>
+        <item>다른앱보다 캘린더 기능이 부족해서</item>
+        <item>다른앱보다 수업관리 기능이 부족해서</item>
+        <item>튜다톡에서 너무 불쾌한 일을 당해서</item>
+        <item>일대일톡이나 쪽지로 불쾌한 연락을 받아서</item>
+        <item>기타(직접입력)</item>
+    </string-array>
+
+    <!-- 자료실 정렬 -->
+    <string-array name="pds_sort_arrays">
+        <item>등록일순</item>
+        <item>과목순</item>
+        <item>이름순</item>
+        <item>인기순</item>
+    </string-array>
+
+    <!-- 기능요청 타입 -->
+    <string-array name="func_request_arrays">
+        <item>기능개선</item>
+        <item>버그신고</item>
+        <item>회원신고</item>
+        <item>기타(직접입력)</item>
+    </string-array>
+
+    <!-- 교육정보 정렬 -->
+    <string-array name="simsim_sort_arrays">
+        <item>등록일순</item>
+        <item>인기순</item>
+        <item>이름순</item>
+    </string-array>
+
+    <!-- 마켓 정렬 -->
+    <string-array name="market_sort_arrays">
+        <item>등록일순</item>
+        <item>이름순</item>
+        <item>지역순</item>
+        <item>인기순</item>
+    </string-array>
+
+    <string-array name="lesson_count">
+        <item>시강</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+
+    <string-array name="lesson_count_max">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+
+    <string-array name="class_count">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <string-array name="class_time">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <!-- 주소 : 시도명 -->
+    <string-array name="address_sido_arrays">
+        <item>선택하세요</item>
+        <item>서울특별시</item>
+        <item>부산광역시</item>
+        <item>대구광역시</item>
+        <item>인천광역시</item>
+        <item>광주광역시</item>
+        <item>대전광역시</item>
+        <item>울산광역시</item>
+        <item>세종특별자치시</item>
+        <item>경기도</item>
+        <item>강원도</item>
+        <item>충청북도</item>
+        <item>충청남도</item>
+        <item>전라북도</item>
+        <item>전라남도</item>
+        <item>경상북도</item>
+        <item>경상남도</item>
+        <item>제주특별자치도</item>
+        <item>해외</item>
+    </string-array>
+
+    <!-- 잡마켓 문의하기 -->
+    <string-array name="market_request_arrays">
+        <item>기업 신규등록</item>
+        <item>내용 수정요청</item>
+        <item>기타 문의</item>
+    </string-array>
+
+    <string name="today_at_time_fmt">"오늘 <xliff:g id="TIME_INTERVAL">%s</xliff:g>"</string>
+    <string name="tomorrow_at_time_fmt">"내일 <xliff:g id="TIME_INTERVAL">%s</xliff:g>"</string>
+    <string name="date_time_fmt">"<xliff:g id="DATE">%s</xliff:g>, <xliff:g id="TIME_INTERVAL">%s</xliff:g>"</string>
+
+    <plurals name="Nminutes">
+        <item quantity="one">"1분"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g>분"</item>
+    </plurals>
+    <plurals name="Nmins">
+        <item quantity="one">"1분"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g>분"</item>
+    </plurals>
+    <plurals name="Nhours">
+        <item quantity="one">"1시간"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g>시간"</item>
+    </plurals>
+    <plurals name="Ndays">
+        <item quantity="one">"1일"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g>일"</item>
+    </plurals>
+    <plurals name="Nweeks">
+        <item quantity="one" >"1주"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g>주"</item>
+    </plurals>
+    <plurals name="weekN">
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g>번째 주"</item>
+    </plurals>
+
+    <string name="agenda_today">"오늘, <xliff:g id="DATE">%1$s</xliff:g>"</string>
+    <string name="agenda_yesterday">"어제, <xliff:g id="DATE">%1$s</xliff:g>"</string>
+    <string name="agenda_tomorrow">"내일, <xliff:g id="DATE">%1$s</xliff:g>"</string>
+
+    <string name="quick_response_settings">"빠른 응답"</string>
+    <string name="quick_response_settings_summary">"참석자에게 보내는 빠른 응답 메시지 수정"</string>
+    <string name="quick_response_settings_title">"빠른 응답 수정"</string>
+    <string name="quick_response_settings_edit_title">"빠른 응답"</string>
+    <string name="quick_response_dialog_title">"빠른 응답 선택"</string>
+    <string name="quick_response_email_failed">"이메일 프로그램 찾기 실패"</string>
+    <string-array name="quick_response_defaults">
+        <item>"조금 늦어요."</item>
+        <item>"약 10분 후에 도착합니다."</item>
+        <item>"저 없이 시작하세요."</item>
+        <item>"죄송합니다. 일정을 변경해야 합니다."</item>
+    </string-array>
+
+    <string name="no_title_label" msgid="302177118061368042">"(제목 없음)"</string>
+    <string name="map_label" msgid="8795383535586556038">"위치"</string>
+    <string name="call_label" msgid="2960328220008869083">"통화"</string>
+    <string name="edit_label" msgid="8934331258435656534">"수정"</string>
+    <string name="delete_label" msgid="874742811918030739">"삭제"</string>
+    <string name="save_label" msgid="2133599104834432589">"완료"</string>
+    <string name="discard_label" msgid="2394623883289782541">"취소"</string>
+    <string name="snooze_all_label" msgid="4994488813124409077">"모두 일시 중지"</string>
+    <string name="dismiss_all_label" msgid="1834400025868091301">"모두 해제"</string>
+    <string name="snooze_label" msgid="1515893621063224666">"분 후 다시알림"</string>
+    <string name="email_guests_label" msgid="8772030932155305903">"참석자에게 이메일 보내기"</string>
+    <string name="email_organizer_label" msgid="7178059542798074813">"이메일 관리도구"</string>
+    <string name="email_picker_label" msgid="4808253965057791781">"이메일:"</string>
+
+    <string name="accessibility_remove_attendee" msgid="7082751172654698863">"참석자 삭제"</string>
+    <string name="accessibility_pick_start_date" msgid="3926641487042699037">"시작일"</string>
+    <string name="accessibility_pick_start_time" msgid="4913428100936555149">"시작 시간"</string>
+    <string name="accessibility_pick_end_date" msgid="5624250196618643922">"종료일"</string>
+    <string name="accessibility_pick_end_time" msgid="7120310166355224941">"종료 시간"</string>
+    <string name="accessibility_pick_time_zone" msgid="7155465783500323811">"표준시간대"</string>
+    <string name="accessibility_pick_recurrence" msgid="1834311617874828931">"일정 반복"</string>
+    <string name="accessibility_add_reminder" msgid="2267950744060950152">"알림 추가"</string>
+    <string name="accessibility_remove_reminder" msgid="5261609343259665139">"알림 삭제"</string>
+    <string name="accessibility_add_attendee" msgid="5654014177472600916">"참석자 추가"</string>
+    <string name="accessibility_sync_cal" msgid="6506181885764723383">"캘린더 동기화"</string>
+    <string name="accessibility_all_day" msgid="4146955438811915282">"종일 일정"</string>
+    <string name="accessibility_repeats" msgid="1629279916830919582">"반복"</string>
+    <string name="accessibility_reminder_time" msgid="3594100545814579575">"알림 시간"</string>
+    <string name="accessibility_reminder_type" msgid="5339120699701437227">"알림 유형"</string>
+    <string name="accessibility_reminder_showmeas" msgid="6669129015980006570">"내 상태"</string>
+    <string name="accessibility_reminder_privacy" msgid="8669288484484022771">"공개 설정"</string>
+    <string name="acessibility_cal_notification" msgid="7267601064994839394">"캘린더 알림"</string>
+    <string name="acessibility_snooze_notification" msgid="5007852779125102681">"알림 일시중지"</string>
+    <string name="accessibility_email_notification" msgid="9124064701968129831">"참석자에게 이메일 보내기"</string>
+    <string name="day_view_new_event_hint" msgid="2131483437911536229">"+ 새 일정"</string>
+    <string name="template_announce_item_index" msgid="4067877800670753110">"일정 <xliff:g id="ITEM_INDEX">%1$s</xliff:g>/<xliff:g id="ITEM_COUNT">%2$s</xliff:g>"</string>
+
+    <string name="preferences_title">"설정"</string>
+    <string name="preferences_general_title">"캘린더 보기 설정"</string>
+    <string name="preferences_reminder_title">"알림"</string>
+    <string name="preferences_hide_declined_title">"거부한 일정 숨기기"</string>
+    <string name="preferences_week_start_day_title">"한 주의 시작"</string>
+    <string name="preferences_week_start_day_dialog">"한 주의 시작"</string>
+    <string name="preferences_clear_search_history_title">"검색기록 지우기"</string>
+    <string name="preferences_clear_search_history_summary">"모든 검색기록 삭제"</string>
+    <string name="search_history_cleared">"검색기록이 삭제되었습니다."</string>
+    <string name="preferences_alerts_title">"알림"</string>
+    <string name="preferences_alerts_vibrateWhen_title">"진동"</string>
+    <string name="preferences_alerts_ringtone_title">"소리"</string>
+    <string name="preferences_alerts_popup_title">"팝업 알림"</string>
+    <string name="preferences_default_reminder_title">"기본 알림 시간"</string>
+    <string name="preferences_default_reminder_dialog">"기본 알림 시간"</string>
+    <string name="preferences_default_reminder_default">"10"</string>
+    <string name="preferences_use_home_tz_title">"기본 시간대 사용"</string>
+    <string name="preferences_use_home_tz_descrip">"여행하는 동안 캘린더와 일정 시간을 기본 시간대로 표시합니다."</string>
+    <string name="preferences_home_tz_title">"기본 시간대"</string>
+    <string name="preferences_show_week_num_title">"몇째 주인지 표시"</string>
+    <string name="preferences_about_title">"정보"</string>
+    <string name="preferences_build_version">"빌드 버전"</string>
+    <string name="gadget_title">"캘린더"</string>
+    <plurals name="month_more_events">
+        <item quantity="one">"+ 1개"</item>
+        <item quantity="other">"+ <xliff:g id="NUMBER">%d</xliff:g>개"</item>
+    </plurals>
+    <string name="gadget_no_events">"예정된 캘린더 일정이 없습니다."</string>
+    <string name="preferences_experimental_category">"베타"</string>
+    <string name="preferences_reminders_category">"알림"</string>
+    <string name="preferences_reminders_responded_label">"알림 건너뛰기"</string>
+    <string name="preferences_reminders_responded_dialog">"알림 건너뛰기"</string>
+    <string name="preferences_reminders_quiet_hours_label">"무음 모드 시간"</string>
+    <string name="preferences_reminders_quiet_hours_description">"지정한 시간에는 일정 알림을 무음으로 설정합니다."</string>
+    <string name="preferences_reminders_quiet_hours_start">"무음 모드 시작 시간"</string>
+    <string name="preferences_reminders_quiet_hours_end">"무음 모드 종료 시간"</string>
+    <string name="preferences_debug_category">"디버깅"</string>
+    <string name="do_not_check" msgid="7815441673853466129">"선택안함 -&gt;"</string>
+    <string name="quick_response_custom_msg" msgid="8792374208224108798">"직접 메시지 쓰기…"</string>
+
+    <!-- DO NOT TRANSLATE -->
+    <string name="preferences_week_start_day_default">-1</string>
+    <string name="preferences_home_tz_default">Asia/Seoul</string>
+    <string translatable="false" name="email_subject_prefix">Re:\u0020</string>
+    <!-- Do Not Translate.  Sender identity for global notification synchronization. -->
+    <string name="notification_sender_id"></string>
+    <string name="tardis">TARDIS</string>
+
+    <!-- Send a copy of the database to developers for debugging [CHAR LIMIT="NONE"] -->
+    <string name="copy_db" msgid="437691290566699292">"데이터베이스 보내기"</string>
+
+  <plurals name="Nevents">
+    <item quantity="one" msgid="5230907142214104485">"일정 1개"</item>
+    <item quantity="other" msgid="6093072093209431078">"일정 <xliff:g id="COUNT">%d</xliff:g>개"</item>
+  </plurals>
+  <plurals name="N_remaining_events">
+    <item quantity="one" msgid="431585781647034528">"남은 일정 1개"</item>
+    <item quantity="other" msgid="3609243840882275136">"남은 일정 <xliff:g id="COUNT">%d</xliff:g>개"</item>
+  </plurals>
+
+</resources>

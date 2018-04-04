@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="main_background">#ffffff</color>
+    <color name="status_color">#ffffff</color>
+    <color name="point_color_1">#f64747</color>
+    <color name="point_color_2">#4b77be</color>
+    <color name="point_color_1_semi">#f56b6b</color>
+    <color name="gray">#e5e5e5</color>
+    <color name="light_gray">#f8f8f8</color>
+    <color name="super_light_gray">#f3f3f3</color>
+    <color name="divider">#e5e5e5</color>
+    <color name="actionbar">#4b77be</color>
+    <color name="functionmenu">#f8f8f8</color>
+    <color name="gnb_gray">#b5b5b5</color>
+    <color name="divider_gray">#cacaca</color>
+    <color name="mint">#2fb79d</color>
+    <color name="light_black">#7a7a7a</color>
+    <color name="super_light_gray2">#f5f5f5</color>
+    <color name="component_off">#a4a4a4</color>
+    <color name="component_on">#f64747</color>
+
+
+    <color name="theme_color_1">#f06276</color>
+    <color name="theme_color_2">#4b77be</color>
+    <color name="theme_color_3">#009688</color>
+    <color name="theme_color_4">#673ab7</color>
+    <color name="theme_color_5">#4d6a92</color>
+
+    <color name="transparent_10">#e5ffffff</color>
+    <color name="transparent_20">#ccffffff</color>
+    <color name="transparent_30">#b2ffffff</color>
+    <color name="transparent_40">#99ffffff</color>
+    <color name="transparent_50">#7fffffff</color>
+    <color name="transparent_60">#66ffffff</color>
+    <color name="transparent_70">#4cffffff</color>
+    <color name="transparent_75">#3fffffff</color>
+    <color name="transparent_80">#33ffffff</color>
+    <color name="transparent_90">#19ffffff</color>
+    <color name="transparent_95">#0cffffff</color>
+    <color name="transparent_100">#00ffffff</color>
+
+    <color name="transparent_dark10">#e5000000</color>
+    <color name="transparent_dark20">#cc000000</color>
+    <color name="transparent_dark30">#b2000000</color>
+    <color name="transparent_dark40">#99000000</color>
+    <color name="transparent_dark50">#7f000000</color>
+    <color name="transparent_dark55">#8c000000</color>
+    <color name="transparent_dark60">#66000000</color>
+    <color name="transparent_dark70">#4c000000</color>
+    <color name="transparent_dark75">#3f000000</color>
+    <color name="transparent_dark80">#33000000</color>
+    <color name="transparent_dark90">#19000000</color>
+    <color name="transparent_dark100">#00000000</color>
+
+
+
+
+
+    <color name="menu_base">#35bfc3</color>
+    <color name="text_default">#ccffffff</color>
+    <color name="text_lightgray">#7fffffff</color>
+    <color name="text_functionmenu">#5e5e65</color>
+    <color name="text_oliveblack">#362d0b</color>
+    <color name="vdivider">#e8e8e9</color>
+    <color name="divider_light">#d9d9d9</color>
+    <color name="divider_light2">#dadada</color>
+    <color name="button_solid_press">#f4f4f4</color>
+    <color name="text_dialog">#77777d</color>
+    <color name="mint_dark">#35bfc2</color>
+    <color name="pink_hot">#f53977</color>
+    <color name="pink">#e2366f</color>
+    <color name="pink_semi">#e23670</color>
+    <color name="pink_light">#de7e9e</color>
+    <color name="pink_lowlight">#f88fb2</color>
+    <color name="top_btn">#c3c3c3</color>
+    <color name="top_btn_light">#d3d3d3</color>
+    <color name="status_bar">#202020</color>
+    <color name="error_page">#ffffff</color>
+    <color name="warning">#e536d5</color>
+    <color name="text_white">#ffffff</color>
+    <color name="text_black">#000000</color>
+    <color name="text_semigray">#333333</color>
+    <color name="text_semilightgray">#717171</color>
+    <color name="dimmed">#dd000000</color>
+    <color name="dimmedLight">#19000000</color>
+    <color name="yellow_dark">#f9bf3b</color>
+    <color name="dark_yellow">#ffc436</color>
+    <color name="border_darkgray">#c8c8c8</color>
+    <color name="border_lightgray">#e8e8e8</color>
+    <color name="category_black">#474747</color>
+
+    <color name="text">#FCFCFC</color>
+    <color name="text_light">#999999</color>
+    <color name="text_inverted">#FFFFFF</color>
+    <color name="text_title">#DFDFDF</color>
+    <color name="text_gray">#ededed</color>
+    <color name="text_darkgray">#646464</color>
+    <color name="text_darkgray2">#646464</color>
+    <color name="text_red">#ff0000</color>
+    <color name="text_orange_hard">#ff9100</color>
+    <color name="text_orange">#ffb900</color>
+    <color name="text_orange_soft">#ffd700</color>
+
+    <color name="dimmedHard">#66000000</color>
+    <color name="dividerHard">#66000000</color>
+
+    <color name="pager_footer">#1fb6ed</color>
+    <color name="pager_selected_text">#FFFFFF</color>
+    <color name="pager_background">#F4F4F4</color>
+    <color name="pager_background_alternate">#E7E7E7</color>
+    <color name="text_link">#1fb6ed</color>
+    <color name="table_text">#484848</color>
+    <color name="table_text_inverted">#FFFFFF</color>
+    <color name="table_text_light">#A6A6A6</color>
+    <color name="table_text_header">#636363</color>
+    <color name="header_background_start">#ECECEC</color>
+    <color name="header_background_end">#C3C3C3</color>
+    <color name="header_background_top">#F9F9F9</color>
+    <color name="header_background_bottom">#A7A7A7</color>
+    <color name="actionbar_background_start">#272727</color>
+    <color name="actionbar_background_end">#1A1A1A</color>
+    <color name="main_background_start">#2E2E2E</color>
+    <color name="main_background_end">#2C2C2C</color>
+    <color name="button_background_enabled_start">#1fb6ed</color>
+    <color name="button_background_enabled_end">#1c9ac8</color>
+    <color name="button_background_pressed_start">#f76500</color>
+    <color name="button_background_pressed_end">#fb812c</color>
+    <color name="edit_text_background_start">#EFF6FF</color>
+    <color name="edit_text_background_end">#FBFDFF</color>
+    <color name="button_background_disabled_start">#7b7b7b</color>
+    <color name="button_background_disabled_end">#646464</color>
+    <color name="profile_button_red">#f1474a</color>
+    <color name="text_shadow">#000000</color>
+
+    <color name="background_selected">#1fb6ed</color>
+    <color name="nav_button_text_light">#ffffff</color>
+    <color name="nav_button_pressed">#1fb6ed</color>
+    <color name="nav_button_disabled">#646464</color>
+    <color name="nav_button_text_disabled">#464646</color>
+
+    <color name="dark_grey">#1f1f1f</color>
+    <color name="navigation_drawer_item_separator">#c2c2c2</color>
+    <color name="blue">#0000ff</color>
+    <color name="blue_light">#c8c8f2</color>
+    <color name="yellow">#f5f4ae</color>
+
+    <color name="button_calendar_pink">#fb1353</color>
+    <color name="button_calendar_trans_gray">#4b000000</color>
+
+</resources>

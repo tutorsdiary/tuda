@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:clickable="true"
+    android:splitMotionEvents="false"
+    android:background="@color/transparent_dark60">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_centerInParent="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="13dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:layout_gravity="center"
+            android:text="일정 데이터를 가져오고 있습니다..."
+            style="@style/T2"
+            android:textColor="@color/text_black"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#dadada"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="11.5dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/notice_button_next_selector"
+                android:text="닫기"
+                android:textAllCaps="false"
+                style="@style/T5"
+                android:enabled="false"/>
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="65dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/notice_button_next_selector"
+                android:text="종료"
+                android:textAllCaps="false"
+                style="@style/T5"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

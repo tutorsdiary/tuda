@@ -1,0 +1,70 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/light_gray"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingLeft="12.5dp"
+            android:paddingRight="12.5dp" >
+            <EditText
+                android:id="@+id/area_name_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:paddingBottom="8dp"
+                android:background="@null"
+                android:inputType="text"
+                android:hint="구 또는 동 입력 (예: 잠실2동 -> 잠실)"
+                android:imeOptions="actionSearch"
+                style="@style/T3" />
+            <include layout="@layout/divider_full"/>
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/divider"
+                android:dividerHeight="0.5dp"
+                android:listSelector="@drawable/list_selector"
+                android:drawSelectorOnTop="true"
+                android:scrollbars="none"/>
+
+            <TextView
+                android:id="@+id/txt_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/common_error"
+                android:drawablePadding="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/list_item_empty12"
+                style="@style/T5"
+                android:visibility="gone"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <include layout="@layout/progress" />
+</FrameLayout>

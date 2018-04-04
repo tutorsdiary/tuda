@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="3dp">
+
+        <ImageView
+            android:id="@+id/img_photo"
+            android:src="@drawable/memo_student_default"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="홍길동"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            style="@style/T2"
+            android:includeFontPadding="false"/>
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:src="@drawable/memo_student_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+</FrameLayout>

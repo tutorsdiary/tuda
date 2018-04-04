@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="15dp">
+
+            <TextView
+                android:id="@+id/ab_title"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/common_admin_talk_tooltip_me"
+                android:text="@string/study_room_notice"
+                android:textColor="@color/text_white"
+                android:lineSpacingExtra="1.5dp"/>
+
+</RelativeLayout>

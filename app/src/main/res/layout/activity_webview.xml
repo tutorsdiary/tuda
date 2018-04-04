@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gpb="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/main_background"/>
+
+        <LinearLayout
+            android:id="@+id/layout_btnbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/webview_btn_height"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divider"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:src="@drawable/xml_webview_back_selector"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:tag="back"/>
+
+                <ImageButton
+                    android:id="@+id/btn_forward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:layout_toRightOf="@+id/btn_back"
+                    android:src="@drawable/xml_webview_forward_selector"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:tag="forward"/>
+
+                <ImageButton
+                    android:id="@+id/btn_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/xml_webview_close_selector"
+                    android:background="@null"
+                    android:tag="close"/>
+
+                <LinearLayout
+                    android:id="@+id/area_today_noview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/btn_close"
+                    android:layout_marginRight="15dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/today_noview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:buttonTint="@color/point_color_1"/>
+
+                    <TextView
+                        android:id="@+id/text_today_noview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="오늘 그만보기"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-6dp"
+        android:layout_marginBottom="-4dp"
+        android:layout_gravity="bottom"
+        android:max="100"
+        style="?android:attr/progressBarStyleHorizontal"/>
+
+</RelativeLayout>

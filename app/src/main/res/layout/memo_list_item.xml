@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="false"
+    card_view:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/memo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/photo"
+            android:maxLines="10"
+            android:textSize="13dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:ellipsize="end"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/memo"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/divider_gray"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_below="@+id/divider"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <ImageView
+                android:id="@+id/student_dot"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/xml_circle_solid_red"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/student_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/student_dot"
+                android:layout_toLeftOf="@+id/createdAt"
+                android:paddingLeft="5dp"
+                android:layout_centerVertical="true"
+                android:gravity="left|center_vertical"
+                android:text=""
+                style="@style/T6_small"
+                android:textColor="@color/black"
+                android:includeFontPadding="false"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/createdAt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:text=""
+                style="@style/T6_small"
+                android:textColor="@color/transparent_dark20"
+                android:includeFontPadding="false"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,354 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/transparent_dark60">
+
+    <RelativeLayout
+        android:id="@+id/layout_base"
+        android:layout_width="wrap_content"
+        android:layout_height="460dp"
+        android:layout_margin="20dp"
+        android:paddingTop="14dp"
+        android:layout_centerInParent="true"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_marketType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="검색"
+                    style="@style/T1"
+                    android:textColor="@color/text_black"/>
+
+                <ImageView
+                    android:id="@+id/btn_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/search_cancel"
+                    android:tag="CLOSE"/>
+            </LinearLayout>
+
+            <include layout="@layout/divider_full"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_title"
+            android:layout_marginBottom="50dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_recruitType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+                        <RadioGroup
+                            android:id="@+id/recruit_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/recruit_A"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="전체"
+                                android:checked="true"
+                                android:textColor="#757575"/>
+
+                            <RadioButton
+                                android:id="@+id/recruit_R"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:text="구인"
+                                android:textColor="#757575"/>
+
+                            <RadioButton
+                                android:id="@+id/recruit_W"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:text="구직"
+                                android:textColor="#757575"/>
+
+                        </RadioGroup>
+                    </RelativeLayout>
+
+                    <include layout="@layout/divider_full"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_partnerType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+                        <RadioGroup
+                            android:id="@+id/partner_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/partner_H"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="학원"
+                                android:checked="true"
+                                android:textColor="#757575"
+                                android:tag="H"/>
+
+                            <RadioButton
+                                android:id="@+id/partner_A"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:text="과외업체"
+                                android:textColor="#757575"
+                                android:tag="A"/>
+
+                            <RadioButton
+                                android:id="@+id/partner_P"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:text="개인"
+                                android:textColor="#757575"
+                                android:tag="P"/>
+
+                        </RadioGroup>
+                    </RelativeLayout>
+
+                    <include layout="@layout/divider_full"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp">
+
+                    <LinearLayout
+                        android:id="@+id/layout_area_ai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="60dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txt_area_si"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:drawableRight="@drawable/common_select_box_arrow"
+                                android:drawablePadding="19dp"
+                                android:hint="지역을 선택하세요."
+                                style="@style/T3" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_area_gu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/layout_area_ai"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="60dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txt_area_gu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:drawableRight="@drawable/common_select_box_arrow"
+                                android:drawablePadding="19dp"
+                                android:text="전체"
+                                style="@style/T3" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_marginRight="12.5dp"
+                    android:background="@color/divider"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_recruitSector"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_recruitSector"
+                        android:layout_width="wrap_content"
+                        android:layout_height="59dp"
+                        android:gravity="center_vertical"
+                        android:drawableRight="@drawable/common_select_box_arrow"
+                        android:drawablePadding="19dp"
+                        android:hint="분야를 선택하세요."
+                        style="@style/T3" />
+
+                    <include layout="@layout/divider_full"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_gender"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="59dp"
+                        android:gravity="center_vertical"
+                        android:drawableRight="@drawable/common_select_box_arrow"
+                        android:drawablePadding="19dp"
+                        android:hint="성별을 선택하세요."
+                        style="@style/T3" />
+
+                    <include layout="@layout/divider_full"/>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp">
+
+                    <EditText
+                        android:id="@+id/edit_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:text=""
+                        android:hint="검색어를 입력해주세요."
+                        style="@style/T5"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/layout_button"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12.5dp"
+                android:layout_marginRight="12.5dp"
+                android:background="@color/divider"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_init"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:text="초기화"
+                    android:textAllCaps="false"
+                    style="@style/T5"
+                    android:textColor="@color/point_color_1"
+                    android:tag="INIT"/>
+
+                <Button
+                    android:id="@+id/btn_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:text="검색하기"
+                    android:textAllCaps="false"
+                    style="@style/T5"
+                    android:textColor="@color/point_color_1"
+                    android:tag="SEARCH"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <include layout="@layout/progress" />
+    </LinearLayout>
+
+</RelativeLayout>

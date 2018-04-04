@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:scrollbars="none"
+    android:isScrollContainer="false"
+    android:overScrollMode="never"
+    android:descendantFocusability="blocksDescendants" >
+
+        <com.tuda.teacher.calendar.widget.CalendarMonthView
+            android:id="@+id/calendar_month_view"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content" >
+            <include layout="@layout/calendar_week_row" />
+            <include layout="@layout/calendar_week_row" />
+            <include layout="@layout/calendar_week_row" />
+            <include layout="@layout/calendar_week_row" />
+            <include layout="@layout/calendar_week_row" />
+            <include layout="@layout/calendar_week_row" />
+        </com.tuda.teacher.calendar.widget.CalendarMonthView>
+
+</ScrollView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gnb_height">50dp</dimen>
+    <dimen name="actionbar_height">56dp</dimen>
+    <dimen name="function_menu_height">35dp</dimen>
+    <dimen name="category_menu_height">40dp</dimen>
+    <dimen name="headerrow_height">35dp</dimen>
+    <dimen name="webview_btn_height">50dp</dimen>
+</resources>

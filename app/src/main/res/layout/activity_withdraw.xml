@@ -1,0 +1,214 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tuda_toolbar"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tuda_toolbar"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_marginRight="12.5dp"
+                    android:layout_marginBottom="36dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" 님,"
+                            style="@style/T1"
+                            android:textColor="@color/point_color_2"
+                            android:textStyle="bold"/>
+                        
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/point_color_2"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:text="@string/withdraw_msg1"
+                        style="@style/T1"
+                        android:id="@+id/textView2" />
+
+                    <TextView
+                        android:id="@+id/text_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="27dp"
+                        android:text=""
+                        style="@style/T2"
+                        android:lineSpacingExtra="3dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_marginRight="12.5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="13dp"
+                            android:paddingBottom="13dp"
+                            android:paddingLeft="18dp"
+                            android:paddingRight="14dp"
+                            android:background="@drawable/round_rect_r2_5">
+
+                            <TextView
+                                android:id="@+id/text_reason"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="탈퇴 사유를 알려주시겠어요?"
+                                android:drawableRight="@drawable/common_select_box_arrow"
+                                style="@style/T3"/>
+
+                            <LinearLayout
+                                android:id="@+id/area_reason"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_reason"
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <EditText
+                                    android:id="@+id/edit_reason"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:hint="탈퇴 사유를 입력해주세요."
+                                    style="@style/T3"
+                                    android:singleLine="true"
+                                    android:background="@null"/>
+
+                                <include layout="@layout/divider_black_full"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:padding="13dp"
+                        android:background="@drawable/round_rect_r2_5"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/edit_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:gravity="center_vertical"
+                            android:background="@null"
+                            android:hint="@string/withdraw_msg8"
+                            style="@style/T3"
+                            android:textColor="@color/transparent_dark20"
+                            android:singleLine="true"
+                            android:password="true"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/area_warning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:paddingBottom="70dp"
+                    android:layout_above="@+id/btn_withdraw"
+                    android:background="#f8f8f8"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/gray"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginRight="11dp"
+                        android:gravity="center_vertical"
+                        android:drawableLeft="@drawable/common_warning"
+                        android:drawablePadding="6dp"
+                        android:text="탈퇴시 주의사항 안내"
+                        style="@style/T6"
+                        android:textColor="@color/point_color_1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginRight="11dp"
+                        android:text="@string/withdraw_msg3"
+                        style="@style/T7"
+                        android:textColor="@color/point_color_2"
+                        android:lineSpacingExtra="3dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_withdraw"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:text="탈퇴하기"
+            style="@style/T1"
+            android:textColor="@color/white"
+            android:background="@color/point_color_2"/>
+    </RelativeLayout>
+</FrameLayout>

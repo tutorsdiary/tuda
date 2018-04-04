@@ -1,0 +1,183 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ab_layout_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/actionbar_height">
+
+    <RelativeLayout
+        android:id="@+id/ab_title_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:layout_toLeftOf="@+id/ab_layout_btn">
+
+        <TextView
+            android:id="@+id/ab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="180dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="17.5dp"
+            android:ellipsize="end"
+            android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/ab_title_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ab_title"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:text=""
+            android:textColor="@color/text_white"
+            android:textSize="12.5dp"
+            android:ellipsize="end"
+            android:singleLine="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/ab_layout_btn">
+
+        <ImageView
+            android:id="@+id/ab_btn_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="8.5dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:src="@drawable/actionbar_menu"/>
+
+        <ImageView
+            android:id="@+id/ab_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="8.5dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:src="@drawable/actionbar_back_icon"/>
+
+        <ImageView
+            android:id="@+id/ab_icon_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/menu_new"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@id/ab_layout_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingRight="15dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/ab_btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="11dp"
+            android:paddingRight="7.5dp"
+            android:src="@drawable/actionbar_search_icon"
+            android:visibility="gone"/>
+
+        <ToggleButton
+            android:id="@+id/ab_btn_alarm"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:paddingRight="7.5dp"
+            android:layout_gravity="center_vertical"
+            android:drawableRight="@drawable/actionbar_alarm_icon_selector"
+            android:background="@null"
+            android:textOn="@null"
+            android:textOff="@null"
+            android:checked="true"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/ab_btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:layout_gravity="right"
+            android:src="@drawable/actionbar_add_icon"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/ab_btn_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:src="@drawable/actionbar_edit_icon"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/ab_btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:src="@drawable/actionbar_save_selector"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/ab_btn_exit_talkroom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:src="@drawable/actionbar_talk_exit"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/ab_btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:src="@drawable/actionbar_delete"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/ab_btn_mytalk"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:src="@drawable/actionbar_my_list"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/ab_btn_inquiry"
+            android:layout_width="40dp"
+            android:layout_height="21dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="right|center_vertical"
+            android:gravity="center"
+            android:text="문의"
+            android:textSize="12dp"
+            android:includeFontPadding="false"
+            android:background="@drawable/actionbar_button_r12_stroke"
+            android:visibility="gone"
+            style="@style/T5"/>
+
+        <ImageView
+            android:id="@+id/ab_btn_function"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:layout_gravity="right|center_vertical"
+            android:src="@drawable/actionbar_expand_menu"
+            android:visibility="gone"/>
+    </LinearLayout>
+</RelativeLayout>
+

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="12.5dp"
+                android:paddingBottom="50dp"
+                android:onClick="closeKeyboard"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="학력정보 (선택)"
+                    android:includeFontPadding="false"
+                    android:layout_weight="1"
+                    style="@style/T2"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" >
+                    <TextView
+                        android:id="@+id/school"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="50dp"
+                        android:gravity="center_vertical"
+                        android:hint="학교"
+                        android:inputType="text"
+                        android:ellipsize="end"
+                        android:background="@drawable/round_rect_r2_5"
+                        style="@style/T2"/>
+
+                    <TextView
+                        android:id="@+id/cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="15dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/input_cancel"
+                        android:textColor="@color/point_color_1"
+                        android:inputType="phone"
+                        android:background="@null"
+                        android:visibility="gone"
+                        style="@style/T2"/>
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_marginTop="19dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/grade"
+                        android:drawableRight="@drawable/common_select_box_arrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:gravity="center_vertical"
+                        android:hint="학년"
+                        android:background="@drawable/round_rect_r2_5"
+                        android:layout_weight="1"
+                        style="@style/T2"/>
+                    <View
+                        android:layout_width="19dp"
+                        android:layout_height="match_parent"
+                        android:background="@null" />
+                    <TextView
+                        android:id="@+id/status"
+                        android:drawableRight="@drawable/common_select_box_arrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:gravity="center_vertical"
+                        android:hint="재학상태"
+                        android:background="@drawable/round_rect_r2_5"
+                        android:layout_weight="1"
+                        style="@style/T2"/>
+
+                </LinearLayout>
+                <EditText
+                    android:id="@+id/major"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="19dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:gravity="center_vertical"
+                    android:hint="전공"
+                    android:inputType="text"
+                    android:background="@drawable/round_rect_r2_5"
+                    style="@style/T2"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="추가 학력정보 (선택)"
+                    android:includeFontPadding="false"
+                    android:layout_weight="1"
+                    style="@style/T2"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+                    <TextView
+                        android:id="@+id/school2"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="50dp"
+                        android:gravity="center_vertical"
+                        android:hint="학교"
+                        android:inputType="text"
+                        android:ellipsize="end"
+                        android:background="@drawable/round_rect_r2_5"
+                        style="@style/T2"/>
+
+                    <TextView
+                        android:id="@+id/cancel2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="15dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/input_cancel"
+                        android:textColor="@color/point_color_1"
+                        android:inputType="phone"
+                        android:background="@null"
+                        android:visibility="gone"
+                        style="@style/T2"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="19dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/grade2"
+                        android:drawableRight="@drawable/common_select_box_arrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:gravity="center_vertical"
+                        android:hint="학년"
+                        android:background="@drawable/round_rect_r2_5"
+                        android:layout_weight="1"
+                        style="@style/T2"/>
+                    <View
+                        android:layout_width="19dp"
+                        android:layout_height="match_parent"
+                        android:background="@null" />
+                    <TextView
+                        android:id="@+id/status2"
+                        android:drawableRight="@drawable/common_select_box_arrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:gravity="center_vertical"
+                        android:hint="재학상태"
+                        android:background="@drawable/round_rect_r2_5"
+                        android:layout_weight="1"
+                        style="@style/T2"/>
+
+                </LinearLayout>
+                <EditText
+                    android:id="@+id/major2"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="19dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:gravity="center_vertical"
+                    android:hint="전공"
+                    android:inputType="text"
+                    android:background="@drawable/round_rect_r2_5"
+                    style="@style/T2"/>
+
+                <TextView
+                    android:id="@+id/abort_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/abort_input"
+                    android:includeFontPadding="false"
+                    android:layout_weight="1"
+                    style="@style/T2"
+                    android:textColor="@color/point_color_2"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12.5dp"
+        android:layout_marginLeft="12.5dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="bottom|right" >
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/join_next_btn"
+            android:layout_alignParentRight="true"
+            android:background="@null" />
+
+    </RelativeLayout>
+</FrameLayout>

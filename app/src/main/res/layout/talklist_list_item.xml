@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/divider_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="12.5dp"
+        android:paddingRight="12.5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_weight="1"
+            android:background="@color/divider"/>
+
+        <TextView
+            android:id="@+id/text_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:maxLines="1"
+            android:textSize="10dp"
+            android:textColor="@color/transparent_dark20"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_weight="1"
+            android:background="@color/divider" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/llayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="9dp"
+            android:paddingLeft="12.5dp"
+            android:paddingRight="12.5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_photo"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/common_student_default"
+                android:scaleType="fitXY"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="14.5dp">
+
+                    <TextView
+                        android:id="@+id/lnickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:textSize="11.5dp"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/lgender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_toRightOf="@+id/lnickname"
+                        android:layout_alignParentBottom="true"
+                        android:textSize="10dp"
+                        android:textColor="@color/transparent_dark20"/>
+
+                    <TextView
+                        android:id="@+id/lcreatedAt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="-2dp"
+                        android:layout_toRightOf="@+id/lgender"
+                        android:layout_alignParentBottom="true"
+                        android:textSize="9dp"
+                        android:textColor="@color/transparent_dark20"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="235dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/bg_lmessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:background="@null">
+
+                        <TextView
+                            android:id="@+id/lmessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/talk_tooltip_others"
+                            android:maxWidth="235dp"
+                            android:textSize="13dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingExtra="2dp"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/lpicture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/talk_send_photo_load"
+                        android:scaleType="fitXY"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="9dp"
+            android:paddingLeft="12.5dp"
+            android:paddingRight="12.5dp"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/rcreatedAt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="right"
+                android:textSize="9dp"
+                android:textColor="@color/transparent_dark20"/>
+
+            <RelativeLayout
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right">
+
+                <LinearLayout
+                    android:id="@+id/bg_rmessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/point_color_2">
+
+                    <TextView
+                        android:id="@+id/rmessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/talk_tooltip_me"
+                        android:maxWidth="280dp"
+                        android:textSize="13dp"
+                        android:textColor="@color/black"
+                        android:lineSpacingExtra="2dp"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/rpicture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/talk_send_photo_load"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="9dp"
+            android:background="@color/super_light_gray"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include layout="@layout/divider_full"/>
+
+            <TextView
+                android:id="@+id/nmessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="11dp"
+                android:layout_marginLeft="12.5dp"
+                android:layout_marginRight="12.5dp"
+                android:maxWidth="280dp"
+                style="@style/T2"
+                android:textSize="13dp"
+                android:lineSpacingExtra="2dp"/>
+
+            <include layout="@layout/divider_full"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/divider_read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="12.5dp"
+        android:paddingRight="12.5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_weight="1"
+            android:background="@color/divider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/talk_lastread"
+            android:maxLines="1"
+            android:textSize="10dp"
+            android:textColor="@color/transparent_dark20"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_weight="1"
+            android:background="@color/divider" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/tuda_toolbar"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_to_member"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_marginRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:text="신고대상자"
+                    style="@style/T4"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_marginRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:text="제목"
+                    style="@style/T4"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txt_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp"
+                        android:gravity="center_vertical"
+                        android:text="내용"
+                        style="@style/T4"/>
+
+                    <include layout="@layout/divider_full"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_marginRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:text="신고사유 작성"
+                    style="@style/T3"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <EditText
+                    android:id="@+id/edit_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:background="@color/light_gray"
+                    android:hint="신고사유를 상세히 입력해주세요.\n입력한 정보는 튜다 관리자에게 전달됩니다."
+                    style="@style/T3"
+                    android:minLines="5"
+                    android:maxLines="20"
+                    android:gravity="top"/>
+
+                <include layout="@layout/divider_full"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_regist"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:text="신고하기"
+            style="@style/T1"
+            android:textColor="@color/white"
+            android:background="@color/point_color_2"/>
+    </RelativeLayout>
+</FrameLayout>

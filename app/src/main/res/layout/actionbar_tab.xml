@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <View
+        android:id="@+id/dimmed"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/dimmed"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/menu"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="수업일정"
+        android:textSize="11dp"
+        android:textColor="@color/text_default"
+        android:textStyle="normal"/>
+
+    <View
+        android:id="@+id/underbar"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/text_default"
+        android:visibility="gone"/>
+</RelativeLayout>

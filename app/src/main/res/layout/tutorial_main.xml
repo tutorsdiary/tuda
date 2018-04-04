@@ -1,0 +1,112 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_tutorial"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_dark30"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:id="@+id/layout_menu_btn"
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        android:layout_marginTop="-300dp"
+        android:layout_marginLeft="-300dp"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="600dp"
+            android:layout_height="600dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/xml_circle_blue"/>
+
+        <View
+            android:id="@+id/view_menu_back"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="312dp"
+            android:layout_marginTop="312dp"
+            android:background="@drawable/xml_circle_white_transparent"/>
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="300dp">
+
+            <View
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/xml_circle_white"/>
+
+            <ImageView
+                android:id="@+id/btn_tutorial_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="25dp"
+                android:padding="10dp"
+                android:tint="@color/point_color_2"
+                android:src="@drawable/actionbar_menu"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="100dp"
+            android:layout_marginBottom="130dp"
+            android:text="메뉴를 보고 싶으세요?\n삼선버튼을 눌러보세요!"
+            android:textSize="18dp"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_floating_btn"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-200dp"
+        android:layout_marginRight="-200dp"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="600dp"
+            android:layout_height="600dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/xml_circle_blue"/>
+
+        <View
+            android:id="@+id/view_floating_back"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="156dp"
+            android:layout_marginLeft="206dp"
+            android:background="@drawable/xml_circle_white_transparent"/>
+
+        <View
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="156dp"
+            android:layout_marginLeft="207dp"
+            android:background="@drawable/xml_circle_white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="80dp"
+            android:gravity="right"
+            android:text="플로팅버튼을 눌러보세요!\n메뉴별 기능이 숨어있어요!"
+            android:textSize="18dp"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_to_member"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:text="쪽지수신자"
+                    style="@style/T4"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <EditText
+                    android:id="@+id/edit_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:paddingTop="17.5dp"
+                    android:paddingBottom="28dp"
+                    android:background="@color/light_gray"
+                    android:hint="쪽지 내용을 입력해주세요."
+                    style="@style/T3"
+                    android:minLines="5"
+                    android:maxLines="20"
+                    android:gravity="top|left"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/note_msg1"
+                    style="@style/T7"
+                    android:textColor="@color/point_color_1"
+                    android:lineSpacingExtra="4dp"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_regist"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:background="@color/point_color_2"
+        android:textColor="@color/text_white"
+        android:text="쪽지 발송"
+        style="@style/T5"/>
+</FrameLayout>

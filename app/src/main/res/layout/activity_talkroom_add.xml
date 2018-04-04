@@ -1,0 +1,170 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/text_category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:drawableRight="@drawable/common_select_box_arrow"
+                            android:drawablePadding="19dp"
+                            android:text="카테고리를 선택하세요."
+                            style="@style/T2"/>
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_full"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_party"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/text_party"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            style="@style/T2"/>
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_full"/>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edit_talkroom_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_marginRight="12.5dp"
+                    android:layout_marginTop="12.5dp"
+                    android:layout_marginBottom="12.5dp"
+                    android:background="@null"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:hint="어떤 이야기를 하고 싶으세요?"
+                    android:gravity="top|left"
+                    android:lineSpacingExtra="2dp"
+                    android:minLines="5"
+                    android:maxLines="30"
+                    style="@style/T2"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="203dp"
+                        android:background="#f5f5f5">
+
+                        <LinearLayout
+                            android:id="@+id/btn_attach_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/solution_add_photo"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:text="첨부할 사진이 있나요?"
+                                style="@style/T2"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="9dp"
+                                android:text="첨부할 사진이 없다면, 다음으로 :)"
+                                style="@style/T6_big"
+                                android:textColor="@color/black"/>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/img_question"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:minHeight="50dp"
+                            android:maxHeight="203dp"
+                            android:scaleType="centerCrop"/>
+                    </RelativeLayout>
+
+                    <ImageButton
+                        android:id="@+id/btn_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12.5dp"
+                        android:layout_marginRight="12.5dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/photo_edit"
+                        android:background="@null"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <include layout="@layout/divider_full"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

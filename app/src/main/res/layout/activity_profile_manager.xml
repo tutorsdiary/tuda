@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:background="@color/point_color_2"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/change_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/point_color_2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:includeFontPadding="false"
+                android:text="비밀번호 변경"
+                style="@style/T2"
+                android:textColor="@color/white"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent_80"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/point_color_2"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:includeFontPadding="false"
+                android:text="로그아웃"
+                style="@style/T2"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <ScrollView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="30dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/layout_profile_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_marginTop="21dp"
+                        android:padding="1dp"
+                        android:src="@drawable/profile_photo_detail_default"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/xml_circle_strok" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="95dp"
+                        android:layout_marginLeft="-26dp"
+                        android:layout_toRightOf="@+id/profile_image"
+                        android:src="@drawable/photo_edit"
+                        android:background="@null"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/profile_gender_male"
+                    android:drawablePadding="8dp"
+                    android:layout_marginTop="12.5dp"
+                    android:gravity="center"
+                    android:text="- - -"
+                    android:textSize="20dp"
+                    android:maxLength="14"
+                    android:inputType="textPersonName"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/T2"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp">
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="아이디"
+                        android:layout_alignParentBottom="true"
+                        android:paddingBottom="10dp"
+                        android:includeFontPadding="false"
+                        style="@style/T6"
+                        android:textColor="@color/transparent_dark20"/>
+
+                    <ImageView
+                        android:id="@+id/edit_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/profile_detail_edit"/>
+
+                </RelativeLayout>
+
+                <include layout="@layout/divider_full"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp">
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="44dp"
+                        android:text="이메일"
+                        android:includeFontPadding="false"
+                        android:gravity="center_vertical"
+                        style="@style/T5"
+                        android:textColor="@color/point_color_2"/>
+
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:includeFontPadding="false"
+                        android:gravity="center_vertical|right"
+                        style="@style/T4"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_mail_auth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="44dp"
+                        android:text="이메일인증"
+                        android:includeFontPadding="false"
+                        android:gravity="center_vertical"
+                        style="@style/T5"
+                        android:textColor="@color/point_color_2"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:includeFontPadding="false"
+                        android:gravity="center_vertical|right"
+                        android:text="@string/mail_auth_indicator"
+                        style="@style/T4"
+                        android:textColor="@color/point_color_1"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp">
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="기본정보"
+                        android:layout_alignParentBottom="true"
+                        android:paddingBottom="10dp"
+                        android:includeFontPadding="false"
+                        style="@style/T6"
+                        android:textColor="@color/transparent_dark20"/>
+
+                    <ImageView
+                        android:id="@+id/edit_default_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/profile_detail_edit"/>
+
+                </RelativeLayout>
+
+                <include layout="@layout/divider_full"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp">
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="44dp"
+                        android:text="이름"
+                        android:includeFontPadding="false"
+                        android:gravity="center_vertical"
+                        style="@style/T5"
+                        android:textColor="@color/point_color_2"/>
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:includeFontPadding="false"
+                        android:gravity="center_vertical|right"
+                        style="@style/T4"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp">
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="44dp"
+                        android:text="닉네임"
+                        android:includeFontPadding="false"
+                        android:gravity="center_vertical"
+                        style="@style/T5"
+                        android:textColor="@color/point_color_2"/>
+
+                    <TextView
+                        android:id="@+id/nickname2"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:includeFontPadding="false"
+                        android:gravity="center_vertical|right"
+                        style="@style/T4"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp">
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="44dp"
+                        android:text="생년월일"
+                        android:includeFontPadding="false"
+                        android:gravity="center_vertical"
+                        style="@style/T5"
+                        android:textColor="@color/point_color_2"/>
+
+                    <TextView
+                        android:id="@+id/birthday"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:inputType="date"
+                        android:includeFontPadding="false"
+                        android:gravity="center_vertical|right"
+                        style="@style/T4"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp">
+                    <ImageView
+                        android:id="@+id/edit_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/profile_detail_edit"/>
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="연락처"
+                        android:layout_alignParentBottom="true"
+                        android:paddingBottom="10dp"
+                        android:includeFontPadding="false"
+                        style="@style/T6"
+                        android:textColor="@color/transparent_dark20" />
+
+                </RelativeLayout>
+
+                <include layout="@layout/divider_full"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp">
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="43dp"
+                        android:text="휴대폰번호"
+                        android:includeFontPadding="false"
+                        android:gravity="center_vertical"
+                        style="@style/T5"
+                        android:textColor="@color/point_color_2"/>
+
+                    <TextView
+                        android:id="@+id/phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:inputType="phone"
+                        android:includeFontPadding="false"
+                        android:gravity="center_vertical|right"
+                        style="@style/T4"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sub_info_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="27dp"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="수업정보"
+                            android:layout_alignParentBottom="true"
+                            android:paddingBottom="10dp"
+                            android:includeFontPadding="false"
+                            style="@style/T6"
+                            android:textColor="@color/transparent_dark20"/>
+
+                        <ImageView
+                            android:id="@+id/edit_lesson"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/profile_detail_edit"/>
+
+                    </RelativeLayout>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="44dp"
+                            android:text="수업과목"
+                            android:includeFontPadding="false"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="top"
+                            style="@style/T5"
+                            android:textColor="@color/point_color_2"/>
+
+                        <TextView
+                            android:id="@+id/lesson_subject"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="44dp"
+                            android:lineSpacingExtra="5dp"
+                            android:hint="수업과목을 입력해주세요"
+                            android:paddingBottom="15dp"
+                            android:inputType="textMultiLine"
+                            android:gravity="center_vertical|right"
+                            style="@style/T4"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="44dp"
+                            android:text="수업대상"
+                            android:includeFontPadding="false"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="top"
+                            style="@style/T5"
+                            android:textColor="@color/point_color_2"/>
+
+                        <TextView
+                            android:id="@+id/lesson_grade"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="44dp"
+                            android:hint="수업대상을 입력해주세요"
+                            android:paddingBottom="15dp"
+                            android:lineSpacingExtra="5dp"
+                            android:inputType="textMultiLine"
+                            android:gravity="center_vertical|right"
+                            style="@style/T4"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="44dp"
+                            android:text="직종"
+                            android:includeFontPadding="false"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="top"
+                            style="@style/T5"
+                            android:textColor="@color/point_color_2"/>
+
+                        <TextView
+                            android:id="@+id/jobType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="44dp"
+                            android:lineSpacingExtra="5dp"
+                            android:hint="직종을 입력해주세요"
+                            android:inputType="textMultiLine"
+                            android:gravity="center_vertical|right"
+                            style="@style/T4"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="44dp"
+                            android:text="경력"
+                            android:includeFontPadding="false"
+                            android:gravity="center_vertical"
+                            style="@style/T5"
+                            android:textColor="@color/point_color_2"/>
+
+                        <TextView
+                            android:id="@+id/career"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="44dp"
+                            android:lineSpacingExtra="5dp"
+                            android:hint="경력을 입력해주세요"
+                            android:inputType="textMultiLine"
+                            android:gravity="center_vertical|right"
+                            style="@style/T4"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="44dp"
+                            android:text="수업지역"
+                            android:includeFontPadding="false"
+                            android:gravity="center_vertical"
+                            style="@style/T5"
+                            android:textColor="@color/point_color_2"/>
+
+                        <TextView
+                            android:id="@+id/lesson_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="44dp"
+                            android:lineSpacingExtra="5dp"
+                            android:hint="수업지역을 입력해주세요"
+                            android:inputType="textMultiLine"
+                            android:gravity="center_vertical|right"
+                            style="@style/T4"/>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="27dp"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="학력정보 (선택)"
+                            android:layout_alignParentBottom="true"
+                            android:paddingBottom="10dp"
+                            android:includeFontPadding="false"
+                            style="@style/T6"
+                            android:textColor="@color/transparent_dark20"/>
+
+                        <ImageView
+                            android:id="@+id/edit_education"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/profile_detail_edit"/>
+                    </RelativeLayout>
+
+                    <include layout="@layout/divider_full"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="44dp"
+                            android:text="학력"
+                            android:includeFontPadding="false"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="top"
+                            style="@style/T5"
+                            android:textColor="@color/point_color_2"/>
+
+                        <TextView
+                            android:id="@+id/education1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="5dp"
+                            android:paddingBottom="10dp"
+                            android:inputType="textMultiLine"
+                            android:hint="학력을 입력해주세요"
+                            android:gravity="top|right"
+                            style="@style/T4"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/education2_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="12.5dp"
+                            android:paddingRight="12.5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="44dp"
+                                android:text="추가학력"
+                                android:includeFontPadding="false"
+                                android:gravity="center_vertical"
+                                style="@style/T5"
+                                android:textColor="@color/point_color_2"/>
+
+                            <TextView
+                                android:id="@+id/education2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineSpacingExtra="5dp"
+                                android:paddingBottom="10dp"
+                                android:inputType="textMultiLine"
+                                android:gravity="top|right"
+                                style="@style/T4"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

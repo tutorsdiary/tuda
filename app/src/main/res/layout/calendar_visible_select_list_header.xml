@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="12.5dp"
+    android:paddingRight="12.5dp"
+    android:background="@color/light_gray">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:text=""
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/transparent_dark50"
+        style="@style/T6_big"/>
+
+
+</FrameLayout>

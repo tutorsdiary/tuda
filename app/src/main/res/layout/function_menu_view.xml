@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/function_menu_height"
+    android:background="#f8f8f8">
+
+    <TextView
+        android:id="@+id/fm_txt_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12.5dp"
+        android:layout_centerVertical="true"
+        android:text=""
+        style="@style/T7"
+        android:textSize="13dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="12.5dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/fm_spin_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/fm_btn_chart"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/grade_chart_on"
+            android:drawablePadding="5dp"
+            android:text="차트보기"
+            style="@style/T7"
+            android:textSize="13dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/fm_btn_talk_category"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/common_category"
+            android:drawablePadding="5dp"
+            android:text="카테고리"
+            style="@style/T7"
+            android:textSize="13dp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/fm_btn_deleteGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/fm_btn_deleteLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/fm_txt_selectAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="전체선택"
+                    style="@style/T7"
+                    android:textSize="12dp"
+                    android:tag="selectAll"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/fm_txt_read"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="읽음표시"
+                    style="@style/T7"
+                    android:textSize="12dp"
+                    android:tag="read"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/fm_txt_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="삭제하기"
+                    style="@style/T7"
+                    android:textSize="12dp"
+                    android:tag="delete"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fm_txt_deleteMode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:background="#f8f8f8"
+                android:gravity="center_vertical"
+                android:text="일괄처리"
+                style="@style/T7"
+                android:tag="deleteMode"
+                android:textSize="13dp"
+                android:textColor="@color/point_color_1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/divider"/>
+
+</RelativeLayout>

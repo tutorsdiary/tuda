@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="12.5dp"
+    android:paddingRight="12.5dp">
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/all_switch"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:text="전체 캘린더 선택"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/transparent_dark50"
+        style="@style/T6_big"/>
+
+
+</FrameLayout>

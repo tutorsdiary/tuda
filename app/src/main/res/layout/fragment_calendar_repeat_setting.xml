@@ -1,0 +1,399 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <RadioGroup
+            android:id="@+id/calendar_repeat_radio"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:divider="#cc000000"
+            android:showDividers="middle"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:layout_height="50dp"
+            android:background="@color/point_color_2">
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/radio_day"
+                android:text="매일"
+                android:button="@null"
+                android:background="@drawable/radio_indicator_underline_mint"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                style="@style/T3"
+                android:layout_weight="1"/>
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/radio_week"
+                android:text="매주"
+                android:button="@null"
+                android:background="@drawable/radio_indicator_underline_mint"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                style="@style/T3"
+                android:layout_weight="1"/>
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/radio_month"
+                android:text="매월"
+                android:button="@null"
+                android:background="@drawable/radio_indicator_underline_mint"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                style="@style/T3"
+                android:layout_weight="1"/>
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/radio_year"
+                android:text="매년"
+                android:button="@null"
+                android:background="@drawable/radio_indicator_underline_mint"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                style="@style/T3"
+                android:layout_weight="1"/>
+        </RadioGroup>
+
+        <ScrollView
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:overScrollMode="never" >
+
+            <LinearLayout
+                android:id="@+id/repeat_daily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/repeat_interval"
+                        android:drawableLeft="@drawable/calendar_add_repeat"
+                        android:layout_height="60dp"
+                        android:layout_width="65dp"
+                        android:drawablePadding="10dp"
+                        android:paddingRight="10dp"
+                        android:text="1"
+                        android:maxLines="1"
+                        android:maxLength="3"
+                        android:background="@null"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        style="@style/T3"/>
+
+                    <TextView
+                        android:id="@+id/repeat_interval_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/repeat_week_interval_txt"
+                        style="@style/T3"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/repeat_month_area"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" >
+
+                    <include layout="@layout/divider_full"/>
+
+                    <RadioGroup
+                        android:id="@+id/repeat_monthly_radiogroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:paddingLeft="15dp" >
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/repeat_month_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:button="@drawable/radio_button_blue"
+                            android:paddingLeft="10dp"
+                            android:text="@string/repeat_month_day_interval"
+                            style="@style/T3"/>
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/repeat_month_week"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:button="@drawable/radio_button_blue"
+                            android:paddingLeft="10dp"
+                            android:text="@string/repeat_month_week_interval"
+                            style="@style/T3"/>
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/repeat_week_area"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" >
+
+                    <include layout="@layout/divider_full"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:layout_weight="1">
+                            <CheckBox
+                                android:id="@+id/monday"
+                                android:text="@string/monday"
+                                android:gravity="center"
+                                android:button="@null"
+                                android:background="@drawable/xml_circle_selector2"
+                                style="@style/T3"
+                                android:layout_width="42dp"
+                                android:layout_height="42dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:layout_weight="1">
+                            <CheckBox
+                                android:id="@+id/tuesday"
+                                android:text="@string/tuesday"
+                                android:gravity="center"
+                                android:button="@null"
+                                android:background="@drawable/xml_circle_selector2"
+                                style="@style/T3"
+                                android:layout_width="42dp"
+                                android:layout_height="42dp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:layout_weight="1">
+                            <CheckBox
+                                android:id="@+id/wednseday"
+                                android:text="@string/wednsday"
+                                android:gravity="center"
+                                android:button="@null"
+                                android:background="@drawable/xml_circle_selector2"
+                                style="@style/T3"
+                                android:layout_width="42dp"
+                                android:layout_height="42dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:layout_weight="1">
+                            <CheckBox
+                                android:id="@+id/thursday"
+                                android:text="@string/thursday"
+                                android:gravity="center"
+                                android:button="@null"
+                                android:background="@drawable/xml_circle_selector2"
+                                style="@style/T3"
+                                android:layout_width="42dp"
+                                android:layout_height="42dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:layout_weight="1">
+                            <CheckBox
+                                android:id="@+id/friday"
+                                android:text="@string/friday"
+                                android:gravity="center"
+                                android:button="@null"
+                                android:background="@drawable/xml_circle_selector2"
+                                style="@style/T3"
+                                android:layout_width="42dp"
+                                android:layout_height="42dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:layout_weight="1">
+                            <CheckBox
+                                android:id="@+id/saturday"
+                                android:text="@string/saturday"
+                                android:gravity="center"
+                                android:button="@null"
+                                android:background="@drawable/xml_circle_selector2"
+                                style="@style/T3"
+                                android:layout_width="42dp"
+                                android:layout_height="42dp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:layout_weight="1">
+                            <CheckBox
+                                android:id="@+id/sunday"
+                                android:text="@string/sunday"
+                                android:gravity="center"
+                                android:button="@null"
+                                android:background="@drawable/xml_circle_selector2"
+                                style="@style/T3"
+                                android:layout_width="42dp"
+                                android:layout_height="42dp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:layout_weight="1">
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_full"/>
+
+                <TextView
+                    android:drawableLeft="@drawable/calendar_add_repeat_finish"
+                    android:drawablePadding="10dp"
+                    android:text="반복 종료를 설정하세요."
+                    style="@style/T3"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RadioGroup
+                    android:id="@+id/repeat_end_setting_radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="10dp">
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:id="@+id/repeat_end_date_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:button="@drawable/radio_button_blue"
+                        android:text="종료일 지정"
+                        style="@style/T3" />
+                    <TextView
+                        android:id="@+id/repeat_end_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="33dp"
+                        android:background="@null"
+                        android:visibility="gone"
+                        android:singleLine="true"
+                        style="@style/T3" />
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:id="@+id/repeat_end_count_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:button="@drawable/radio_button_blue"
+                        android:text="횟수 지정"
+                        style="@style/T3" />
+                    <LinearLayout
+                        android:id="@+id/repeat_end_count_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="33dp"
+                        android:visibility="gone"
+                        >
+                        <EditText
+                            android:id="@+id/repeat_end_count"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="10dp"
+                            android:background="@null"
+                            android:text="10"
+                            android:maxLines="1"
+                            android:maxLength="3"
+                            android:singleLine="true"
+                            android:inputType="number"
+                            style="@style/T3" />
+                        <TextView
+                            android:id="@+id/repeat_end_count_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="10dp"
+                            android:background="@null"
+                            android:text="회 반복"
+                            style="@style/T3" />
+
+                    </LinearLayout>
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:id="@+id/repeat_end_unlimited_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:button="@drawable/radio_button_blue"
+                        android:text="계속 반복"
+                        style="@style/T3" />
+                </RadioGroup>
+
+                <include layout="@layout/divider_full"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+</FrameLayout>

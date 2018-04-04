@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tuda.teacher.ui.view.CheckableRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:id="@+id/layout_contents"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="12.5dp"
+        android:layout_marginRight="85dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/alarm_type"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginRight="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/job_market_oval_solid_red_r7_recruit_type"
+                android:gravity="center"
+                android:text="튜다톡"
+                style="@style/T5"
+                android:includeFontPadding="false"
+                android:textSize="9dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="튜다톡 제목"
+                style="@style/T6_big"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/transparent_dark30"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="튜다톡 내용입니다."
+            style="@style/T2"
+            android:lineSpacingExtra="2.5dp"
+            android:maxLines="3"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/receivedAt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/layout_contents"
+            android:text="2017-03-20 11:31:10"
+            style="@style/T6"
+            android:textColor="@color/transparent_dark40"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/message_new"
+        android:layout_width="28.5dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="46.5dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="NEW"
+        style="@style/T7"
+        android:background="@drawable/talk_list_new"
+        android:textColor="@color/text_white"
+        android:ellipsize="end"
+        android:singleLine="true" />
+
+    <ImageButton
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="12.5dp"
+        android:paddingRight="12.5dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/message_delete"
+        android:background="@null"
+        android:tag="delete"
+        android:visibility="visible"/>
+
+    <CheckBox
+        android:id="@+id/checkbox_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="12.5dp"
+        android:button="@drawable/common_checkbox_selector"
+        android:checked="false"
+        android:focusable="false"
+        android:clickable="false"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/layout_contents"
+        android:background="@color/divider"/>
+
+</com.tuda.teacher.ui.view.CheckableRelativeLayout>

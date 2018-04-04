@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="14dp"
+    android:paddingBottom="14dp"
+    android:paddingLeft="12.5dp"
+    android:paddingRight="12.5dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/school"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/T2"/>
+
+    <TextView
+        android:id="@+id/school_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        style="@style/T6"
+        android:textColor="@color/transparent_dark20"
+        android:ellipsize="end"
+        android:singleLine="true"/>
+
+</LinearLayout>

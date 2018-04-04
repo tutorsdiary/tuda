@@ -1,0 +1,493 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.tuda.teacher.ui.view.TudaToolBar
+            android:id="@+id/tuda_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/actionbar_height"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/area_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+                        <ImageView
+                            android:id="@+id/img_photo"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="21dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/common_student_default_edit_big"
+                            android:scaleType="fitXY"/>
+
+                        <ImageButton
+                            android:id="@+id/btn_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="17.5dp"
+                            android:layout_marginLeft="-32dp"
+                            android:layout_toRightOf="@+id/img_photo"
+                            android:src="@drawable/student_edit_photo"
+                            android:background="@null"/>
+                    </RelativeLayout>
+
+                    <include layout="@layout/divider_full"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edit_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/common_mail"
+                        android:drawablePadding="11dp"
+                        android:hint="이메일"
+                        style="@style/T3"
+                        android:singleLine="true"
+                        android:inputType="textEmailAddress"/>
+
+                    <Button
+                        android:id="@+id/btn_dupcheck"
+                        android:layout_width="70dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical|right"
+                        android:text="중복확인"
+                        style="@style/T5"
+                        android:textSize="13dp"
+                        android:background="@drawable/formbutton_selector"
+                        android:tag="email"/>
+                </LinearLayout>
+
+                <include layout="@layout/divider_full"/>
+
+                <LinearLayout
+                    android:id="@+id/password_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/edit_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="0.9"
+                            android:hint="비밀번호 (4자이상)"
+                            android:drawableLeft="@drawable/setting_lock"
+                            android:drawablePadding="11dp"
+                            style="@style/T3"
+                            android:textSize="13dp"
+                            android:singleLine="true"
+                            android:password="true"/>
+
+                        <EditText
+                            android:id="@+id/edit_password2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1.1"
+                            android:background="@null"
+                            android:hint="비밀번호 확인"
+                            android:drawableLeft="@drawable/setting_lock"
+                            android:drawablePadding="11dp"
+                            style="@style/T3"
+                            android:textSize="13dp"
+                            android:singleLine="true"
+                            android:password="true"/>
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_full"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edit_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginRight="80dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/common_phone"
+                        android:drawablePadding="11dp"
+                        android:hint="휴대폰 번호"
+                        style="@style/T3"
+                        android:maxLength="13"
+                        android:inputType="phone"
+                        android:singleLine="true"/>
+
+                    <LinearLayout
+                        android:id="@+id/safty_number_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/edit_mobile"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="-19dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:background="@null"
+                            android:layout_marginRight="5dp"
+                            android:text="안심번호: "
+                            style="@style/T3"
+                            android:textSize="10dp"
+                            android:singleLine="true" />
+                        <TextView
+                            android:id="@+id/safty_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:background="@null"
+                            android:layout_weight="1"
+                            android:hint="생성된 안심번호가 없습니다."
+                            style="@style/T3"
+                            android:textSize="10dp"
+                            android:maxLength="15"
+                            android:inputType="phone"
+                            android:singleLine="true"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_ident"
+                        android:layout_width="70dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical|right"
+                        android:text="본인인증"
+                        style="@style/T5"
+                        android:textSize="13dp"
+                        android:background="@drawable/formbutton_selector"
+                        android:visibility="gone"
+                        android:tag="email"/>
+                    </RelativeLayout>
+
+
+                <include layout="@layout/divider_full"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="성별"
+                        android:drawableLeft="@drawable/common_gender"
+                        android:drawablePadding="11dp"
+                        style="@style/T3"/>
+
+                    <ImageButton
+                        android:id="@+id/btn_gender_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#00000000"
+                        android:src="@drawable/select_male_off"
+                        android:tag="M"/>
+
+                    <ImageButton
+                        android:id="@+id/btn_gender_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:background="#00000000"
+                        android:src="@drawable/select_female_off"
+                        android:tag="F"/>
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_full"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_birthday"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:drawableLeft="@drawable/common_birth"
+                        android:drawablePadding="11dp"
+                        android:text="생일을 입력해주세요."
+                        style="@style/T3"/>
+                </LinearLayout>
+
+                <include layout="@layout/divider_full"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="지역"
+                        android:drawableLeft="@drawable/common_region"
+                        android:drawablePadding="11dp"
+                        style="@style/T3"/>
+
+                    <Spinner
+                        android:id="@+id/spin_address"
+                        android:spinnerMode="dialog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginLeft="11dp"/>
+                </LinearLayout>
+
+                <include layout="@layout/divider_full"/>
+
+                <LinearLayout
+                    android:id="@+id/area_recommender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+                    <EditText
+                        android:id="@+id/edit_recommender"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/common_mail"
+                        android:drawablePadding="11dp"
+                        android:hint="추천인 이메일 (선택)"
+                        style="@style/T4"
+                        android:singleLine="true"/>
+
+                    <include layout="@layout/divider_full"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/area_talk_param"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/edit_nickname"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/common_person"
+                            android:drawablePadding="11dp"
+                            android:hint="닉네임"
+                            style="@style/T3"
+                            android:singleLine="true"/>
+
+                        <Button
+                            android:id="@+id/btn_dupcheck_nickname"
+                            android:layout_width="70dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical|right"
+                            android:text="중복확인"
+                            style="@style/T5"
+                            android:textSize="13dp"
+                            android:background="@drawable/formbutton_selector"
+                            android:tag="nickname"/>
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_full"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/area_terms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/layout_terms"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="잠깐! 약관에 동의해 주세요!"
+                            style="@style/T3"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:src="@drawable/setting_enter"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="약관읽기"
+                            style="@style/T3"
+                            android:textSize="10dp"/>
+
+                        <CheckBox
+                            android:id="@+id/checkbox_terms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"/>
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_full"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="마케팅 또는 이벤트 등을 위한 SMS 및 이메일의 수신에 동의하십니까?"
+                                style="@style/T3"
+                                android:textSize="11.5dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="제공 동의를 하지 않으셔도 서비스 이용에는 문제가 없습니다!"
+                                style="@style/T3"
+                                android:textSize="8.5dp"/>
+                        </LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/checkbox_marketAgree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"
+                            android:checked="true"/>
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_full"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/common_info"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:text="입력한 모든 정보는 암호화되어 안전하게 저장됩니다."
+                            style="@style/T7"
+                            android:textColor="@color/warning"
+                            android:lineSpacingExtra="4dp"/>
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_full"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_regist"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/formbutton_selector_square"
+                    android:text="가입완료"
+                    style="@style/T5"/>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

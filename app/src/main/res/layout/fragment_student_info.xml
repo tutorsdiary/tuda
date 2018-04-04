@@ -1,0 +1,510 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.tuda.teacher.ui.view.HeaderRowView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/headerrow_height"
+                        app:rowTitle="신상정보"/>
+
+                    <TextView
+                        android:id="@+id/reg_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="12.5dp"
+                        android:layout_alignParentRight="true"
+                        android:text="2016-01-01 등록됨"
+                        style="@style/T7"/>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/img_photo"
+                    android:layout_width="113dp"
+                    android:layout_height="113dp"
+                    android:layout_marginTop="17.5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/common_student_default_edit_big"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/text_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/T2"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_contact_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="14dp"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/btn_call"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/student_shortcut_call_selector"
+                            android:background="@null"
+                            android:enabled="false"
+                            android:tag="mobile"/>
+
+                        <ImageButton
+                            android:id="@+id/btn_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="27dp"
+                            android:layout_marginRight="27dp"
+                            android:src="@drawable/student_sms_selector"
+                            android:background="@null"
+                            android:enabled="false"
+                            android:tag="sms"/>
+
+                        <ImageButton
+                            android:id="@+id/btn_mail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/student_mail_send_selector"
+                            android:background="@null"
+                            android:enabled="false"
+                            android:tag="email"/>
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_full"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/area_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/text_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp"
+                        android:gravity="center_vertical"
+                        style="@style/T2"/>
+
+                    <include layout="@layout/divider_full"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/area_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/text_tel"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_weight="1"
+                            style="@style/T2"/>
+
+                        <LinearLayout
+                            android:id="@+id/btn_tel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right|center_vertical"
+                            android:gravity="center_vertical"
+                            android:tag="tel"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="15dp"
+                                android:src="@drawable/student_cellphone_call_on"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_full"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/area_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/text_address1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                style="@style/T2"/>
+
+                            <TextView
+                                android:id="@+id/text_address2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:layout_weight="1"
+                                style="@style/T2"
+                                android:textColor="@color/transparent_dark20"
+                                android:visibility="gone"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_full"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/area_birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/text_birthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp"
+                        android:gravity="center_vertical"
+                        style="@style/T3"/>
+
+                    <include layout="@layout/divider_full"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/area_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/text_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp"
+                        android:gravity="center_vertical"
+                        style="@style/T3"/>
+
+                    <include layout="@layout/divider_full"/>
+                </LinearLayout>
+
+                <com.tuda.teacher.ui.view.HeaderRowView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/headerrow_height"
+                    android:layout_marginTop="20dp"
+                    app:rowTitle="학교 및 수업정보"/>
+
+                <TextView
+                    android:id="@+id/text_school"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    style="@style/T3"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <TextView
+                    android:id="@+id/max_lesson"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:hint="수업횟수를 수정해주세요."
+                    android:background="@null"
+                    style="@style/T3"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <TextView
+                    android:id="@+id/lesson_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:hint="수업료를 수정해주세요."
+                    android:background="@null"
+                    style="@style/T3"/>
+
+                <include layout="@layout/divider_full"/>
+
+                <LinearLayout
+                    android:id="@+id/area_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/area_subject1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/text_subject1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                style="@style/T3"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_subject1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:background="@null"
+                                android:checked="true"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/area_subject2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+                            <TextView
+                                android:id="@+id/text_subject2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                style="@style/T3"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_subject2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:background="@null"
+                                android:checked="true"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/area_subject3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+                            <TextView
+                                android:id="@+id/text_subject3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                style="@style/T3"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_subject3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:background="@null"
+                                android:checked="true"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/area_subject4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+                            <TextView
+                                android:id="@+id/text_subject4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                style="@style/T3"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_subject4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:background="@null"
+                                android:checked="true"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/area_subject5"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+                            <TextView
+                                android:id="@+id/text_subject5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                style="@style/T3"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_subject5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:background="@null"
+                                android:checked="true"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/area_subject6"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+                            <TextView
+                                android:id="@+id/text_subject6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                style="@style/T3"/>
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_subject6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:background="@null"
+                                android:checked="true"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include layout="@layout/divider_full"/>
+
+                <com.tuda.teacher.ui.view.HeaderRowView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/headerrow_height"
+                    android:layout_marginTop="20dp"
+                    app:rowTitle="과외 진행 여부"/>
+
+                <RelativeLayout
+                    android:id="@+id/area_lessonclose"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/text_lessonclose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/student_lesson_open"
+                        android:includeFontPadding="false"
+                        style="@style/T2"/>
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/switch_lessonclose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:checked="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/subject_open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/student_start"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/subject_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/student_finish"
+        android:visibility="gone"/>
+
+</RelativeLayout>

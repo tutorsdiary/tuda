@@ -1,0 +1,47 @@
+<resources>
+
+    <declare-styleable name="TudaToolBar">
+        <attr name="pageName" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="FunctionMenuView">
+        <attr name="menuType" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="HeaderRowView">
+        <attr name="rowTitle" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ErrorView">
+        <attr name="notiTitle" format="string" />
+        <attr name="imageVisible" format="boolean" />
+        <attr name="textShadow" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomNoticeView">
+    </declare-styleable>
+
+    <declare-styleable name="CustomKakaoLoginButton">
+        <attr name="buttonTitle" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomFloatingActionButton">
+        <attr name="aniMode" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="GalleryView">
+    </declare-styleable>
+
+    <declare-styleable name="TalkCategoryView">
+        <attr name="catName" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CalendarMonthView">
+        <attr name="mFirstDayOfWeek" format="integer" />
+        <attr name="limitWeekOfMonth" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CalendarDayView">
+        <attr name="dayViewLayout" format="reference" />
+    </declare-styleable>
+</resources>

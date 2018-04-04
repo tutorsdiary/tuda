@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tuda.teacher.ui.view.CheckableRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="12.5dp"
+    android:paddingRight="12.5dp"
+    >
+
+<CheckedTextView
+    android:id="@+id/name"
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+    android:layout_centerVertical="true"
+    android:layout_alignParentRight="true"
+    android:gravity="center_vertical"
+    android:clickable="false"
+    android:focusable="false"
+    android:text="홍길동"
+    android:textSize="15dp"
+    android:textColor="@color/text_black"
+    style="@style/T4"/>
+</com.tuda.teacher.ui.view.CheckableRelativeLayout>
